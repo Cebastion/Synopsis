@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sysnopsis-1</title>
+</head>
+<style>
+  /*font-family: 'Inter', sans-serif;
+  font-family: 'Space Mono', monospace;*/
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  :focus,
+  :active {
+    outline: none;
+  }
+
+  a:focus,
+  a:active {
+    outline: none;
+  }
+
+  nav,
+  footer,
+  header,
+  aside {
+    display: block;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  input,
+  button,
+  textarea {
+    font-family: inherit;
+  }
+
+  input::-ms-clear {
+    display: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+
+  span,
+  a,
+  li,
+  label,
+  h1 {
+    font-family: 'Poppins';
+    color: wheat;
+  }
+
+  .wallaper {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .card__user {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .user__description {
+    width: 600px;
+  }
+
+  .user__description span {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+    color: rgb(48, 46, 46);
+  }
+
+  .user__name span {
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+    font-size: 64px;
+    color: black;
+  }
+
+  .user__prof-age {
+    margin: 10px 0 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .user__prof span, .user__age span{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+  }
+  .user__contact{
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .contact__li{
+    display: flex;
+    margin: 10px 0;
+  }
+  .contact__li span{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    color: rgb(48, 46, 46);
+  }
+</style>
+
+<body>
+  <main class="wallaper">
+    <div class="card__user">
+      <div class="user__info">
+        <div class="user__name">
+          <span>Алексей Морозов</span>
+        </div>
+        <div class="user__prof-age">
+          <div class="user__prof">
+            <span>водитель | Стаж: 11 лет</span>
+          </div>
+          <div class="user__age">
+            <span>36 лет</span>
+          </div>
+        </div>
+        <div class="user__description">
+          <span>Опытный водитель с 11-летним стажем работы в сфере транспорта. Ищу работу в крупной транспортной
+            компании, где смогу применить свои профессиональные навыки и опыт для эффективного выполнения задач. В
+            течение 3-х лет работал на позиции водителя в компании по международным грузоперевозкам и всегда превышал
+            установленные планы по доставке грузов.</span>
+        </div>
+        <div class="user__contact">
+          <div class="contact__coloum-1">
+            <div class="contact__li">
+              <img src="" alt="" class="contact__icon">
+              <span>+79123456789</span>
+            </div>
+            <div class="contact__li">
+              <img src="" alt="" class="contact__icon">
+              <span>alexey.morozov@example.com</span>
+            </div>
+            <div class="contact__li">
+              <img src="" alt="" class="contact__icon">
+              <span>habr.com/alexeymorozov</span>
+            </div>
+          </div>
+          <div class="contact__coloum-2">
+            <div class="contact__li">
+              <img src="" alt="" class="contact__icon">
+              <span>Челябинск, ул. Ленина, 10, кв. 25</span>
+            </div>
+            <div class="contact__li">
+              <img src="" alt="" class="contact__icon">
+              <span>www.reallygreatsite.com</span>
+            </div>
+            <div class="contact__li">
+              <img src="" alt="" class="contact__icon">
+              <span>linkedin.com/alexeymorozov</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user__photo">
+        <img style='width: 173px; height: 230px;' src="./img/user-photo.png" alt="">
+      </div>
+    </div>
+    </ma>
+</body>
+
+</html>
