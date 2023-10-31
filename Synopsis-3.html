@@ -145,7 +145,18 @@
   }
 
   .contact__li {
-    margin: 0 auto;
+    margin: 5px 0;
+  }
+
+  .contact__li {
+    display: flex;
+    align-items: center
+  }
+
+  .contact__li img {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
   }
 
   .contact__li span {
@@ -232,18 +243,19 @@
   }
 
   .description span,
-  .description{
+  .description {
     line-height: 25px;
     font-weight: 400;
     font-family: 'Arimo', sans-serif;
     color: #444440;
     font-size: 17px;
   }
+
   .description p {
     font-style: italic;
   }
 
-  .end{
+  .end {
     border: none;
   }
 
@@ -251,15 +263,16 @@
     padding: 0 10px 0 0;
   }
 
-  .dashboard__block  .dashboard__card {
+  .dashboard__block .dashboard__card {
     border: none;
   }
 
-  
+
   .dashboard__block .dashboard__card:last-child {
     border-bottom: 1px solid #444440;
   }
-  .dashboard__achievements span{
+
+  .dashboard__achievements span, .dashboard__achievements {
     display: inline-block;
     margin: 20px 0;
     text-transform: uppercase;
@@ -269,11 +282,35 @@
     font-family: 'Nunito Sans', sans-serif;
     font-size: 20px;
   }
-  .dashboard__coloum-wieght .dashboard__block{
+
+  .dashboard__coloum-wieght .dashboard__block {
     padding: 0 50px 0 50px;
   }
-  .dashboard__coloum-wieght .dashboard__block .dashboard__card{
+
+  .dashboard__coloum-wieght .dashboard__block .dashboard__card {
     border: none;
+  }
+
+  .dashboard__place-age span {
+    display: inline-block;
+    margin: 5px 0;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #444440;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  ul li {
+    margin-left: 25px;
+    color: #525252;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .user__row{
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 10px;
   }
 </style>
 
@@ -287,35 +324,35 @@
         <h2 style='letter-spacing: 5px;'>водитель | Стаж: 11 лет</h2>
       </div>
       <div class="user__contact">
-        <div class="contact__li">
-          <img src="" alt="" class="contact__icon">
-          <span>+79123456789</span>
-        </div>
-        <div class="contact__li">
-          <img src="" alt="" class="contact__icon">
-          <span>alexey.morozov@example.com</span>
-        </div>
-        <div class="contact__li">
-          <img src="" alt="" class="contact__icon">
-          <span>habr.com/alexeymorozov</span>
-        </div>
-        <div class="contact__li">
-          <img src="" alt="" class="contact__icon">
-          <span>Челябинск, ул. Ленина, 10, кв. 25</span>
-        </div>
-        <div class="contact__li">
-          <img src="" alt="" class="contact__icon">
+        <div class="contact__li" style='order: 1;'>
+          <img src="./img/3/1.png" alt="" class="contact__icon">
           <span>www.reallygreatsite.com</span>
         </div>
-        <div class="contact__li">
-          <img src="" alt="" class="contact__icon">
+        <div class="contact__li" style='order: 4;'>
+          <img src="./img/3/2.png" alt="" class="contact__icon">
           <span>linkedin.com/alexeymorozov</span>
+        </div>
+        <div class="contact__li" style='order: 3;'>
+          <img src="./img/3/5.png" alt="" class="contact__icon">
+          <span>+79123456789</span>
+        </div>
+        <div class="contact__li" style='order: 2;'>
+          <img src="./img/3/3.png" alt="" class="contact__icon">
+          <span>alexey.morozov@example.com</span>
+        </div>
+        <div class="contact__li" style='order: 6;'>
+          <img src="./img/3/6.png" alt="" class="contact__icon">
+          <span>habr.com/alexeymorozov</span>
+        </div>
+        <div class="contact__li" style='order: 5;'>
+          <img src="./img/3/4.png" alt="" class="contact__icon">
+          <span>Челябинск, ул. Ленина, 10, кв. 25</span>
         </div>
       </div>
     </div>
     <div class="user__info">
       <div class="user__photo">
-        <img src="./img/user-photo.png" alt="">
+        <img src="./img/3/7.png" alt="">
       </div>
       <div class="user__description">
         <div class="user__age">
@@ -467,12 +504,11 @@
             <h2>Опыт работы</h2>
           </div>
           <div class="dashboard__card">
-            <div class="dashboard__age">
-              <span class='blue'>2003-2006</span>
-            </div>
-            <div class="dashboard__prof">
+            <div class="dashboard__achievements">
               <span>Водитель-международник</span>
-              <span class='blue'>Челябинск, ООО «Глобус»</span>
+            </div>
+            <div class="dashboard__place-age">
+              <span>Челябинск, ООО «Глобус» | 2003-2006</span>
             </div>
             <div class="dashboard__description description">
               <span>Основными обязанностями была доставка грузов по регулярным маршрутам в страны Европы и СНГ. За время
@@ -480,12 +516,12 @@
                 техническим обслуживанием автомобиля и участвовал в восстановлении дорожных знаков на маршруте.
               </span>
               <ul>
-                <p class='bold'>Обязанности:</p>
+                <p style='font-style: normal; font-weight: 800;'>Обязанности:</p>
                 <li>Международные грузоперевозки</li>
                 <li>Техническое обслуживание автомобиля</li>
               </ul>
               <ul>
-                <p class='bold'>Достижения:</p>
+                <p style='font-style: normal; font-weight: 800;'>Достижения:</p>
                 <li>Успешная доставка грузов в страны Европы и СНГ</li>
                 <li>Участие в благоустройстве дорог</li>
               </ul>
@@ -493,11 +529,12 @@
           </div>
           <div class="dashboard__card">
             <div class="dashboard__age">
-              <span class='blue'>2007-2010</span>
             </div>
-            <div class="dashboard__prof">
+            <div class="dashboard__achievements">
               <span>Водитель-экспедитор</span>
-              <span class='blue'>Челябинск, ИП Петров</span>
+            </div>
+            <div class="dashboard__place-age">
+              <span>Челябинск, ИП Петров | 2007-2010</span>
             </div>
             <div class="dashboard__description description">
               <span>Основными обязанностями было проведение внутригородских и междугородных грузоперевозок. Также
@@ -505,24 +542,23 @@
                 успешно выполнял заказы на доставку строительных материалов и продуктов питания.
               </span>
               <ul>
-                <p class='bold'>Обязанности:</p>
+                <p style='font-style: normal; font-weight: 800;'>Обязанности:</p>
                 <li>Проведение внутригородских и междугородных грузоперевозок</li>
                 <li>Погрузка и разгрузка грузов</li>
               </ul>
               <ul>
-                <p class='bold'>Достижения:</p>
+                <p style='font-style: normal; font-weight: 800;'>Достижения:</p>
                 <li>Своевременная доставка грузов</li>
                 <li>Обеспечение сохранности груза</li>
               </ul>
             </div>
           </div>
           <div class="dashboard__card">
-            <div class="dashboard__age">
-              <span class='blue'>2010-2016</span>
+            <div class="dashboard__achievements">
+              <span>Водитель грузового автомобиля</span>
             </div>
-            <div class="dashboard__prof">
-              <span style='width: 200px;'>Водитель грузового автомобиля</span>
-              <span style='text-align: right;' class='blue'>Челябинск,<p>ООО «Транспортные решения»</p></span>
+            <div class="dashboard__place-age">
+              <span>Челябинск, ООО «Транспортные решения» | 2010-2016</span>
             </div>
             <div class="dashboard__description description">
               <span>Основными обязанностями было проведение международных грузоперевозок на автомобиле с тентовым
@@ -532,15 +568,38 @@
                 выполнение графиков доставки.
               </span>
               <ul>
-                <p class='bold'>Обязанности:</p>
+                <p style='font-style: normal; font-weight: 800;'>Обязанности:</p>
                 <li>Проведение внутригородских и междугородных грузоперевозок</li>
                 <li>Погрузка и разгрузка грузов</li>
               </ul>
               <ul>
-                <p class='bold'>Достижения:</p>
+                <p style='font-style: normal; font-weight: 800;'>Достижения:</p>
                 <li>Своевременная доставка грузов</li>
                 <li>Обеспечение сохранности груза</li>
               </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2 style='letter-spacing: 10px;'>Рекомендации с прошлых мест работы</h2>
+          </div>
+          <div class='user__row'>
+            <div class="dashboard__card">
+              <p class='dashboard__achievements'>Иван Иванов</p>
+              <p class='description'>
+                Главный специалист по логистике,
+                ООО Транспортный логист
+              </p>
+              <p class='description'>Телефон: +79012345678</p>
+            </div>
+            <div class="dashboard__card">
+              <p class='dashboard__achievements'>Мария Смирнова</p>
+              <p class='description'>
+                Менеджер отдела по работе
+                с водителями, ООО Логистика экспресс
+              </p>
+              <p class='description'>Телефон: +79098765432</p>
             </div>
           </div>
         </div>
