@@ -82,10 +82,6 @@
     text-decoration: none;
   }
 
-  ul li {
-    list-style: none;
-  }
-
   img {
     vertical-align: top;
   }
@@ -109,8 +105,38 @@
     color: wheat;
   }
 
+  .description span, .description {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+    color: #525252;
+  }
+
+  .bold {
+    color: #525252;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  ul li {
+    margin-left: 25px;
+    color: #525252;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .blue {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1c71ff;
+  }
+
   .wallaper {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
   }
 
@@ -128,10 +154,10 @@
     font-weight: 300;
     font-size: 17px;
     line-height: 20px;
-    color: rgb(48, 46, 46);
+    color: #525252;
   }
 
-  .user__name span {
+  .user__name h1 {
     font-family: 'Space Mono', monospace;
     font-weight: 400;
     font-size: 64px;
@@ -143,26 +169,84 @@
     display: flex;
     justify-content: space-between;
   }
-  .user__prof span, .user__age span{
+
+  .user__prof h2,
+  .user__age h2 {
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-size: 20px;
     color: black;
   }
-  .user__contact{
+
+  .user__contact {
     margin: 10px 0 0 0;
     display: flex;
     justify-content: space-between;
   }
-  .contact__li{
+
+  .contact__li {
     display: flex;
     margin: 10px 0;
   }
-  .contact__li span{
+
+  .contact__li span {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-size: 14px;
-    color: rgb(48, 46, 46);
+    color: #525252;
+  }
+
+  .user__dashboard {
+    display: flex;
+    justify-content:  space-around;
+    margin-top: 20px;
+  }
+
+  .dashboard__coloum-wieght {
+    width: 600px;
+  }
+  .dashboard__coloum-small{
+    width: 230px;
+  }
+
+  .dashboard__title {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #1c71ff;
+  }
+
+  .dashboard__title h2 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    color: black;
+  }
+
+  .dashboard__prof {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dashboard__prof span:first-child {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    color: black;
+  }
+
+  .dashboard__age {
+    margin: 10px 0 10px 50px;
+  }
+
+  .dashboard__description {
+    margin: 10px 0 0 0;
+  }
+
+  .dashboard__card {
+    margin-top: 20px;
+  }
+
+  .dashboard__block {
+    margin-top: 40px;
   }
 </style>
 
@@ -171,14 +255,14 @@
     <div class="card__user">
       <div class="user__info">
         <div class="user__name">
-          <span>Алексей Морозов</span>
+          <h1>Алексей Морозов</h1>
         </div>
         <div class="user__prof-age">
           <div class="user__prof">
-            <span>водитель | Стаж: 11 лет</span>
+            <h2>водитель | Стаж: 11 лет</h2>
           </div>
           <div class="user__age">
-            <span>36 лет</span>
+            <h2>36 лет</h2>
           </div>
         </div>
         <div class="user__description">
@@ -219,10 +303,260 @@
         </div>
       </div>
       <div class="user__photo">
-        <img style='width: 173px; height: 230px;' src="./img/user-photo.png" alt="">
+        <img style='width: 230px; height: 330px;' src="./img/user-photo.png" alt="">
       </div>
     </div>
-    </ma>
+    <div class="user__dashboard">
+      <div class="dashboard__coloum-wieght">
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Опыт работы</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__age">
+              <span class='blue'>2003-2006</span>
+            </div>
+            <div class="dashboard__prof">
+              <span>Водитель-международник</span>
+              <span class='blue'>Челябинск, ООО «Глобус»</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Основными обязанностями была доставка грузов по регулярным маршрутам в страны Европы и СНГ. За время
+                работы в компании успешно доставил крупные партии товаров в Германию и страны Балтии. Также занимался
+                техническим обслуживанием автомобиля и участвовал в восстановлении дорожных знаков на маршруте.
+              </span>
+              <ul>
+                <p class='bold'>Обязанности:</p>
+                <li>Международные грузоперевозки</li>
+                <li>Техническое обслуживание автомобиля</li>
+              </ul>
+              <ul>
+                <p class='bold'>Достижения:</p>
+                <li>Успешная доставка грузов в страны Европы и СНГ</li>
+                <li>Участие в благоустройстве дорог</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__age">
+              <span class='blue'>2007-2010</span>
+            </div>
+            <div class="dashboard__prof">
+              <span>Водитель-экспедитор</span>
+              <span class='blue'>Челябинск, ИП Петров</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Основными обязанностями было проведение внутригородских и междугородных грузоперевозок. Также
+                занимался погрузкой и разгрузкой грузов, проверкой транспортных документов. За время работы в компании
+                успешно выполнял заказы на доставку строительных материалов и продуктов питания.
+              </span>
+              <ul>
+                <p class='bold'>Обязанности:</p>
+                <li>Проведение внутригородских и междугородных грузоперевозок</li>
+                <li>Погрузка и разгрузка грузов</li>
+              </ul>
+              <ul>
+                <p class='bold'>Достижения:</p>
+                <li>Своевременная доставка грузов</li>
+                <li>Обеспечение сохранности груза</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__age">
+              <span class='blue'>2010-2016</span>
+            </div>
+            <div class="dashboard__prof">
+              <span style='width: 200px;'>Водитель грузового автомобиля</span>
+              <span style='text-align: right;' class='blue'>Челябинск,<p>ООО «Транспортные решения»</p></span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Основными обязанностями было проведение международных грузоперевозок на автомобиле с тентовым
+                полуприцепом. Особое внимание уделял безопасности и техническому состоянию автомобиля.За время работы в
+                компании выполнил успешно проект по доставке товаров из Германии в Россию и специальную работу по
+                перевозке аппаратурного оборудования. Также налаживал взаимодействие с партнерами и контролировал
+                выполнение графиков доставки.
+              </span>
+              <ul>
+                <p class='bold'>Обязанности:</p>
+                <li>Проведение внутригородских и междугородных грузоперевозок</li>
+                <li>Погрузка и разгрузка грузов</li>
+              </ul>
+              <ul>
+                <p class='bold'>Достижения:</p>
+                <li>Своевременная доставка грузов</li>
+                <li>Обеспечение сохранности груза</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Образование</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__age">
+              <span class='blue'>2002-2007</span>
+            </div>
+            <div class="dashboard__prof">
+              <span style='width: 300px;'>Челябинская Государственная Академия Физической Культуры</span>
+              <span class='blue'>Высшее</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Закончил Челябинскую Государственную Академию Физической Культуры с отличием, получив специальность
+                тренера-преподавателя физической культуры и спорта.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Сертификаты и курсы</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__age">
+              <span class='blue'>2010</span>
+            </div>
+            <div class="dashboard__prof">
+              <span>Автошкола «Вождение»</span>
+              <span class='blue'>Курс</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Прошел курс по обучению вождению автомобиля с получением свидетельства о присвоении квалификации
+                «Водитель-международник».
+              </span>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__age">
+              <span class='blue'>2015</span>
+            </div>
+            <div class="dashboard__prof">
+              <span>Школа Правил Дорожного Движения</span>
+              <span class='blue'>Курс</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Прошел курс по обучению правилам дорожного движения с получением свидетельства о присвоении
+                категории В, С, D.
+              </span>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__age">
+              <span class='blue'>2020</span>
+            </div>
+            <div class="dashboard__prof">
+              <span>Международная Ассоциация Перевозчиков</span>
+              <span class='blue'>Курс</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Свидетельство, подтверждающее мою квалификацию для перевозки опасных грузов. Получено по результатам
+                успешного прохождения обучающего курса.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Рекомендации с прошлых мест работы</h2>
+          </div>
+          <div class="dashboard__card">
+            <p class='bold'>Иван Иванов</p>
+            <p class='blue' style='display: block; width: 300px; margin: 10px 0 20px;'>
+              Главный специалист по логистике,
+              ООО Транспортный логист
+            </p>
+            <p class='description'>Телефон: +79012345678</p>
+          </div>
+          <div class="dashboard__card">
+            <p class='bold'>Иван Иванов</p>
+            <p class='blue' style='display: block; width: 300px; margin: 10px 0 20px;'>
+              Главный специалист по логистике,
+              ООО Транспортный логист
+            </p>
+            <p class='description'>Телефон: +79012345678</p>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard__coloum-small">
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Топ-достижения</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__prof">
+              <span style='width: 300px;'>Постоянно превышал план по доставке грузов</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>В течение 3-х лет работал на позиции водителя в компании по международным грузоперевозкам и всегда превышал установленные планы по доставке грузов.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Топ-навыки</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__prof">
+              <span style='width: 300px;'>Умение работать с различными моделями автомобилей</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>За 11 лет работы в сфере транспорта приобрел опыт работы с различными моделями автомобилей разных марок и классов.
+              </span>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__prof">
+              <span style='width: 300px;'>Профессиональные навыки вождения</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Владею всеми необходимыми навыками и знаниями для безопасного и эффективного вождения в различных ситуациях на дороге.
+              </span>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__prof">
+              <span style='width: 300px;'>Управление грузовым транспортом</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Имею опыт работы с грузовыми автомобилями разных типов и классов, включая управление тяжелой и многотонной техникой.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Языки</h2>
+          </div>
+          <div class="dashboard__card">
+            <p style='color: black;' class="bold">Русский</p>
+            <p class="description" style='margin-top: 10px;'>Уровень: родной</p>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Увлечения</h2>
+          </div>
+          <div class="dashboard__card">
+            <p style='color: black;' class="bold">Автомобили</p>
+            <p style='color: black;' class="bold">Путешествия</p>
+            <p style='color: black;' class="bold">Спорт</p>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Дополнительная информация</h2>
+          </div>
+          <div class="dashboard__card">
+            <p style='margin: 10px 0 0;' class="description">Водительское удостоверение категории B, C, D, E.</p>
+            <p style='margin: 10px 0 0;' class="description">Опыт работы с различными грузами и пассажирами.</p>
+            <p style='margin: 10px 0 0;' class="description">Знание дорожной ситуации и правил дорожного движения в Челябинске и близлежащих регионах.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 
 </html>
