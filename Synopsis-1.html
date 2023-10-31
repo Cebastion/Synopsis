@@ -105,7 +105,8 @@
     color: wheat;
   }
 
-  .description span, .description {
+  .description span,
+  .description {
     font-family: 'Inter', sans-serif;
     font-weight: 300;
     font-size: 17px;
@@ -198,14 +199,15 @@
 
   .user__dashboard {
     display: flex;
-    justify-content:  space-around;
+    justify-content: space-around;
     margin-top: 20px;
   }
 
   .dashboard__coloum-wieght {
     width: 600px;
   }
-  .dashboard__coloum-small{
+
+  .dashboard__coloum-small {
     width: 230px;
   }
 
@@ -248,6 +250,11 @@
   .dashboard__block {
     margin-top: 40px;
   }
+
+  .user__photo img {
+    width: 230px;
+    height: 330px;
+  }
 </style>
 
 <body>
@@ -259,10 +266,10 @@
         </div>
         <div class="user__prof-age">
           <div class="user__prof">
-            <h2>водитель | Стаж: 11 лет</h2>
+            <h2 style='text-transform: uppercase;'>водитель | Стаж: 11 лет</h2>
           </div>
           <div class="user__age">
-            <h2>36 лет</h2>
+            <h2 style='text-transform: uppercase;'>36 лет</h2>
           </div>
         </div>
         <div class="user__description">
@@ -303,7 +310,7 @@
         </div>
       </div>
       <div class="user__photo">
-        <img style='width: 230px; height: 330px;' src="./img/user-photo.png" alt="">
+        <img src="./img/user-photo.png" alt="">
       </div>
     </div>
     <div class="user__dashboard">
@@ -462,19 +469,19 @@
           </div>
           <div class="dashboard__card">
             <p class='bold'>Иван Иванов</p>
-            <p class='blue' style='display: block; width: 300px; margin: 10px 0 20px;'>
+            <p class='blue' class='dashboard__prof'>
               Главный специалист по логистике,
               ООО Транспортный логист
             </p>
             <p class='description'>Телефон: +79012345678</p>
           </div>
           <div class="dashboard__card">
-            <p class='bold'>Иван Иванов</p>
+            <p class='bold'>Мария Смирнова</p>
             <p class='blue' style='display: block; width: 300px; margin: 10px 0 20px;'>
-              Главный специалист по логистике,
-              ООО Транспортный логист
+              Менеджер отдела по работе
+              с водителями, ООО Логистика экспресс
             </p>
-            <p class='description'>Телефон: +79012345678</p>
+            <p class='description'>Телефон: +79098765432</p>
           </div>
         </div>
       </div>
@@ -488,7 +495,8 @@
               <span style='width: 300px;'>Постоянно превышал план по доставке грузов</span>
             </div>
             <div class="dashboard__description description">
-              <span>В течение 3-х лет работал на позиции водителя в компании по международным грузоперевозкам и всегда превышал установленные планы по доставке грузов.
+              <span>В течение 3-х лет работал на позиции водителя в компании по международным грузоперевозкам и всегда
+                превышал установленные планы по доставке грузов.
               </span>
             </div>
           </div>
@@ -502,7 +510,8 @@
               <span style='width: 300px;'>Умение работать с различными моделями автомобилей</span>
             </div>
             <div class="dashboard__description description">
-              <span>За 11 лет работы в сфере транспорта приобрел опыт работы с различными моделями автомобилей разных марок и классов.
+              <span>За 11 лет работы в сфере транспорта приобрел опыт работы с различными моделями автомобилей разных
+                марок и классов.
               </span>
             </div>
           </div>
@@ -511,7 +520,8 @@
               <span style='width: 300px;'>Профессиональные навыки вождения</span>
             </div>
             <div class="dashboard__description description">
-              <span>Владею всеми необходимыми навыками и знаниями для безопасного и эффективного вождения в различных ситуациях на дороге.
+              <span>Владею всеми необходимыми навыками и знаниями для безопасного и эффективного вождения в различных
+                ситуациях на дороге.
               </span>
             </div>
           </div>
@@ -520,7 +530,8 @@
               <span style='width: 300px;'>Управление грузовым транспортом</span>
             </div>
             <div class="dashboard__description description">
-              <span>Имею опыт работы с грузовыми автомобилями разных типов и классов, включая управление тяжелой и многотонной техникой.
+              <span>Имею опыт работы с грузовыми автомобилями разных типов и классов, включая управление тяжелой и
+                многотонной техникой.
               </span>
             </div>
           </div>
@@ -551,7 +562,8 @@
           <div class="dashboard__card">
             <p style='margin: 10px 0 0;' class="description">Водительское удостоверение категории B, C, D, E.</p>
             <p style='margin: 10px 0 0;' class="description">Опыт работы с различными грузами и пассажирами.</p>
-            <p style='margin: 10px 0 0;' class="description">Знание дорожной ситуации и правил дорожного движения в Челябинске и близлежащих регионах.</p>
+            <p style='margin: 10px 0 0;' class="description">Знание дорожной ситуации и правил дорожного движения в
+              Челябинске и близлежащих регионах.</p>
           </div>
         </div>
       </div>

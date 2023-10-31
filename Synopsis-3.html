@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sysnopsis-3</title>
+</head>
+
+<style>
+  /*
+  font-family: 'Arimo', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Space Mono', monospace;
+*/
+  @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&family=Roboto:wght@100;300;400;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  :focus,
+  :active {
+    outline: none;
+  }
+
+  a:focus,
+  a:active {
+    outline: none;
+  }
+
+  nav,
+  footer,
+  header,
+  aside {
+    display: block;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  input,
+  button,
+  textarea {
+    font-family: inherit;
+  }
+
+  input::-ms-clear {
+    display: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+
+  span,
+  a,
+  li,
+  label,
+  h1 {
+    font-family: 'Poppins';
+    color: wheat;
+  }
+
+  .wallaper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding-bottom: 20px;
+    border-bottom: #444440 solid 1px;
+  }
+
+  .user__name h1 {
+    font-weight: 800;
+    letter-spacing: 10px;
+    margin: 100px 0 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    color: #444440;
+    font-size: 64px;
+  }
+
+  .user__prof h2 {
+    font-weight: 700;
+    letter-spacing: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: uppercase;
+    color: #444440;
+    font-size: 20px;
+  }
+
+  .contact__li {
+    margin: 0 auto;
+  }
+
+  .contact__li span {
+    font-family: 'Arimo', sans-serif;
+    color: #444440;
+    font-size: 16px;
+  }
+
+  .user__contact {
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  }
+
+  .user__photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: #444440 solid 2px;
+  }
+
+  .user__info {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .user__description .user__age span {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-family: 'Arimo', sans-serif;
+    color: #444440;
+    font-size: 16px;
+  }
+
+  .user__description {
+    width: 700px;
+  }
+
+  .user__description span {
+    font-weight: 400;
+    font-family: 'Arimo', sans-serif;
+    color: #444440;
+    font-size: 16px;
+  }
+
+  .user__dashboard {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dashboard__coloum-wieght {
+    border-top: #444440 1px solid;
+    border-left: #444440 1px solid;
+    width: 700px;
+  }
+
+  .dashboard__coloum-small {
+    border-top: #444440 1px solid;
+    width: 300px;
+  }
+
+  .dashboard__title h2 {
+    margin-top: 20px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #444440;
+    font-size: 30px;
+  }
+
+  .dashboard__study {
+    margin: 30px 0 10px;
+  }
+
+  .dashboard__study span {
+    font-weight: 800;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #444440;
+    font-size: 17px;
+  }
+
+  .description span,
+  .description{
+    line-height: 25px;
+    font-weight: 400;
+    font-family: 'Arimo', sans-serif;
+    color: #444440;
+    font-size: 17px;
+  }
+  .description p {
+    font-style: italic;
+  }
+
+  .end{
+    border: none;
+  }
+
+  .dashboard__card {
+    padding: 0 10px 0 0;
+  }
+
+  .dashboard__block  .dashboard__card {
+    border: none;
+  }
+
+  
+  .dashboard__block .dashboard__card:last-child {
+    border-bottom: 1px solid #444440;
+  }
+  .dashboard__achievements span{
+    display: inline-block;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #8b8b8b;
+    font-weight: 800;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+  }
+  .dashboard__coloum-wieght .dashboard__block{
+    padding: 0 50px 0 50px;
+  }
+  .dashboard__coloum-wieght .dashboard__block .dashboard__card{
+    border: none;
+  }
+</style>
+
+<body>
+  <div class="wallaper">
+    <div class="header">
+      <div class="user__name">
+        <h1>алексей морозов</h1>
+      </div>
+      <div class="user__prof">
+        <h2 style='letter-spacing: 5px;'>водитель | Стаж: 11 лет</h2>
+      </div>
+      <div class="user__contact">
+        <div class="contact__li">
+          <img src="" alt="" class="contact__icon">
+          <span>+79123456789</span>
+        </div>
+        <div class="contact__li">
+          <img src="" alt="" class="contact__icon">
+          <span>alexey.morozov@example.com</span>
+        </div>
+        <div class="contact__li">
+          <img src="" alt="" class="contact__icon">
+          <span>habr.com/alexeymorozov</span>
+        </div>
+        <div class="contact__li">
+          <img src="" alt="" class="contact__icon">
+          <span>Челябинск, ул. Ленина, 10, кв. 25</span>
+        </div>
+        <div class="contact__li">
+          <img src="" alt="" class="contact__icon">
+          <span>www.reallygreatsite.com</span>
+        </div>
+        <div class="contact__li">
+          <img src="" alt="" class="contact__icon">
+          <span>linkedin.com/alexeymorozov</span>
+        </div>
+      </div>
+    </div>
+    <div class="user__info">
+      <div class="user__photo">
+        <img src="./img/user-photo.png" alt="">
+      </div>
+      <div class="user__description">
+        <div class="user__age">
+          <span>36 лет. Полная занятость</span>
+        </div>
+        <span>
+          Опытный водитель с 11-летним стажем работы в сфере транспорта.
+          Ищу работу в крупной транспортной компании, где смогу применить свои профессиональные навыки и опыт для
+          эффективного выполнения задач. В течение 3-х лет работал на позиции водителя в компании по международным
+          грузоперевозкам и всегда превышал установленные планы по доставке грузов
+        </span>
+      </div>
+    </div>
+    <div class="user__dashboard">
+      <div class="dashboard__coloum-small">
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Образование</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__study">
+              <span>Челябинская Государственная Академия Физической Культуры</span>
+            </div>
+            <div class="dashboard__age description">
+              <p>Высшее образование</p>
+              <p>2002-2007</p>
+            </div>
+            <div class="dashboard__description description">
+              <span>Закончил Челябинскую Государственную Академию Физической Культуры с отличием, получив специальность
+                тренера-преподавателя физической культуры и спорта.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>курсы и сертификаты</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__study">
+              <span>Автошкола «Вождение»</span>
+            </div>
+            <div class="dashboard__description description">
+              <p>Курс</p>
+              <p>2010</p>
+              <span>Прошел курс по обучению вождению автомобиля с получением свидетельства о присвоении квалификации
+                «Водитель-международник».
+              </span>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__study">
+              <span>Школа Правил Дорожного Движения</span>
+            </div>
+            <div class="dashboard__description description">
+              <p>Курс</p>
+              <p>2015</p>
+              <span>Прошел курс по обучению правилам дорожного движения с получением свидетельства о присвоении
+                категории В, С, D.
+              </span>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__study">
+              <span>Международная Ассоциация Перевозчиков</span>
+            </div>
+            <div class="dashboard__description description">
+              <p>Курс</p>
+              <p>2020</p>
+              <span>Свидетельство, подтверждающее мою квалификацию для перевозки опасных грузов. Получено по результатам
+                успешного прохождения обучающего курса.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Языки</h2>
+          </div>
+          <div class="dashboard__card">
+            <p style='font-weight: 800; margin: 10px 0;' class="description">Русский</p>
+            <p class="description" style='margin-top: 10px;'>Уровень: родной</p>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title" style='margin-bottom: 10px;'>
+            <h2>Увлечения</h2>
+          </div>
+          <div class="dashboard__cardend">
+            <p style='font-weight: 700;' class="description">Автомобили</p>
+            <p style='font-weight: 700;' class="description">Путешествия</p>
+            <p style='font-weight: 700;' class="description">Спорт</p>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard__coloum-wieght">
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Топ-достижения</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__achievements">
+              <span>Постоянно превышал план по доставке грузов</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>В течение 3-х лет работал на позиции водителя в компании по международным грузоперевозкам и всегда
+                превышал установленные планы по доставке грузов.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Топ-навыки</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__achievements">
+              <span>Умение работать с различными моделями автомобилей</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>За 11 лет работы в сфере транспорта приобрел опыт работы с различными моделями автомобилей разных
+                марок и классов.
+              </span>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__achievements">
+              <span>Профессиональные навыки вождения</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Владею всеми необходимыми навыками и знаниями для безопасного и эффективного вождения в различных
+                ситуациях на дороге.
+              </span>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__achievements">
+              <span>Управление грузовым транспортом</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Имею опыт работы с грузовыми автомобилями разных типов и классов, включая управление тяжелой и
+                многотонной техникой.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Опыт работы</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__age">
+              <span class='blue'>2003-2006</span>
+            </div>
+            <div class="dashboard__prof">
+              <span>Водитель-международник</span>
+              <span class='blue'>Челябинск, ООО «Глобус»</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Основными обязанностями была доставка грузов по регулярным маршрутам в страны Европы и СНГ. За время
+                работы в компании успешно доставил крупные партии товаров в Германию и страны Балтии. Также занимался
+                техническим обслуживанием автомобиля и участвовал в восстановлении дорожных знаков на маршруте.
+              </span>
+              <ul>
+                <p class='bold'>Обязанности:</p>
+                <li>Международные грузоперевозки</li>
+                <li>Техническое обслуживание автомобиля</li>
+              </ul>
+              <ul>
+                <p class='bold'>Достижения:</p>
+                <li>Успешная доставка грузов в страны Европы и СНГ</li>
+                <li>Участие в благоустройстве дорог</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__age">
+              <span class='blue'>2007-2010</span>
+            </div>
+            <div class="dashboard__prof">
+              <span>Водитель-экспедитор</span>
+              <span class='blue'>Челябинск, ИП Петров</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Основными обязанностями было проведение внутригородских и междугородных грузоперевозок. Также
+                занимался погрузкой и разгрузкой грузов, проверкой транспортных документов. За время работы в компании
+                успешно выполнял заказы на доставку строительных материалов и продуктов питания.
+              </span>
+              <ul>
+                <p class='bold'>Обязанности:</p>
+                <li>Проведение внутригородских и междугородных грузоперевозок</li>
+                <li>Погрузка и разгрузка грузов</li>
+              </ul>
+              <ul>
+                <p class='bold'>Достижения:</p>
+                <li>Своевременная доставка грузов</li>
+                <li>Обеспечение сохранности груза</li>
+              </ul>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__age">
+              <span class='blue'>2010-2016</span>
+            </div>
+            <div class="dashboard__prof">
+              <span style='width: 200px;'>Водитель грузового автомобиля</span>
+              <span style='text-align: right;' class='blue'>Челябинск,<p>ООО «Транспортные решения»</p></span>
+            </div>
+            <div class="dashboard__description description">
+              <span>Основными обязанностями было проведение международных грузоперевозок на автомобиле с тентовым
+                полуприцепом. Особое внимание уделял безопасности и техническому состоянию автомобиля.За время работы в
+                компании выполнил успешно проект по доставке товаров из Германии в Россию и специальную работу по
+                перевозке аппаратурного оборудования. Также налаживал взаимодействие с партнерами и контролировал
+                выполнение графиков доставки.
+              </span>
+              <ul>
+                <p class='bold'>Обязанности:</p>
+                <li>Проведение внутригородских и междугородных грузоперевозок</li>
+                <li>Погрузка и разгрузка грузов</li>
+              </ul>
+              <ul>
+                <p class='bold'>Достижения:</p>
+                <li>Своевременная доставка грузов</li>
+                <li>Обеспечение сохранности груза</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
