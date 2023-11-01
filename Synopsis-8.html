@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synopsis-8</title>
+</head>
+<style>
+  /*
+  font-family: 'Arimo', sans-serif;
+font-family: 'Barlow', sans-serif;
+font-family: 'Hanken Grotesk', sans-serif;
+font-family: 'Inter', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'PT Serif', serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Space Mono', monospace;
+*/
+  @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&family=Roboto:wght@100;300;400;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  :focus,
+  :active {
+    outline: none;
+  }
+
+  a:focus,
+  a:active {
+    outline: none;
+  }
+
+  nav,
+  footer,
+  header,
+  aside {
+    display: block;
+  }
+
+  html,
+  body {
+    background-color: #e6e9f1;
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  input,
+  button,
+  textarea {
+    font-family: inherit;
+  }
+
+  input::-ms-clear {
+    display: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+
+  span,
+  a,
+  li,
+  label,
+  h1 {
+    font-family: 'Poppins';
+    color: wheat;
+  }
+
+  .wallaper {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .user__info {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .user__name h1 {
+    letter-spacing: 5px;
+    color: #444440;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 64px;
+  }
+
+  .user__prof {
+    width: 140%;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 2px #444440 solid;
+  }
+
+  .user__prof h2 {
+    color: #444440;
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+  }
+
+  .info__photo img {
+    border-radius: 20px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .list {
+    margin: 5px 0;
+    color: #444440;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+  }
+
+  .contact__list {
+    margin-top: 20px;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+    display: grid;
+  }
+  .user__description{
+    margin: 40px 0;
+  }
+  .user__description span{
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #444440;
+    font-weight: 800;
+  }
+  .user__achievements{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    border-top: #444440 2px solid;
+  }
+  .achievement__block{
+    margin-bottom: 20px;
+  }
+  .achievement__list{
+    width: 60%;
+  }
+  .achievement__title h2{
+    text-transform: uppercase;
+    font-style: normal;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    color: #444440;
+    font-weight: 700;
+  }
+  .block__title h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #444440;
+    font-weight: 700;
+  }
+  .block__text span, .block__text a{
+    line-height: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #444440;
+    font-weight: 400;
+  }
+  ul li{
+    margin: 5px 0;
+    margin-left: 30px;
+    line-height: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #444440;
+    font-weight: 400;
+  }
+  .block__prof h2{
+    text-transform: uppercase;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    color: #444440;
+    font-weight: 400;
+  }
+  .block__place-age{
+    margin: 10px 0 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .block__place-age span{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    color: #444440;
+    font-weight: 400;
+  }
+  .block__title-underline-thin span{
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: #444440;
+    font-weight: 400;
+  }
+  .work__block:first-child{
+    margin-top: 0px;
+  }
+  .work__block{
+    margin-top: 40px;
+  }
+  .study__list{
+    width: 85%;
+  }
+  .study__title h2{
+    width: 87%;
+    line-height: 40px;
+  }
+  .block__age{
+    margin: 5px 0 10px;
+  }
+  .block__age h2{
+    text-transform: none;
+    font-size: 18px;
+  }
+  .user__row{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .language__block{
+    margin-top: 20px;
+  }
+  .mt-5{
+    margin-top: 5px;
+  }
+  .mt-0{
+    margin: 0;
+  }
+  .interesting__block{
+    margin-bottom: 0;
+  }
+  .interesting__block:first-child{
+    margin-top: 20px;
+  }
+  .interesting__block .block__prof h2{
+    margin: 5px 0;
+    font-size: 16px;
+  }
+  .link__block .block__prof h2{
+    margin: 20px 0 0;
+    font-size: 16px;
+  }
+  .user__link{
+    width: 20.5%;
+  }
+  .link__block .block__text{
+    margin-top: 10px;
+  }
+  .user__recommendation{
+    border-top: none;
+  }
+  .recommendation__list{
+    width: 95%;
+  }
+  .recommendation__title h2{
+    line-height: 40px;
+  }
+</style>
+
+<body>
+  <div class="wallaper">
+    <div class="user__info">
+      <div class="info__text">
+        <div class="user__name">
+          <h1>Роман Семёнов</h1>
+        </div>
+        <div class="user__prof">
+          <h2>менеджер по продажам</h2>
+        </div>
+        <div class="user__contact">
+          <div class="contact__list">
+            <div class="list" style='order: 1;'>linkedin.com/in/romans</div>
+            <div class="list" style='order: 4;'>romans@domain.com</div>
+            <div class="list" style='order: 2;'>+7 (999)123-45-67</div>
+            <div class="list" style='order: 5;'>Россия, г. Самара</div>
+            <div class="list" style='order: 3;'>01.01.1985</div>
+            <div class="list" style='order: 6;'>36 лет</div>
+          </div>
+        </div>
+      </div>
+      <div class="info__photo">
+        <img src="./img/10/1.png" alt="">
+      </div>
+    </div>
+    <div class="user__description">
+      <span>
+        Опытный менеджер по продажам в автомобильной сфере с 11-летним стажем. Хочу применить свой опыт и знания для развития и увеличения объемов продаж в компании автомобильного бизнеса.
+      </span>
+    </div>
+    <div class="user__achievements">
+      <div class="achievement__title">
+        <h2>топ-достижения</h2>
+      </div>
+      <div class="achievement__list">
+        <div class="achievement__block">
+          <div class="block__title">
+            <h2>Увеличение продаж на 20% за год</h2>
+          </div>
+          <div class="block__text">
+            <span>Внедрение новых методов продаж и создание новых стратегий, что позволило увеличить объем продаж на 20% за год.</span>
+          </div>
+        </div>
+        <div class="achievement__block">
+          <div class="block__title">
+            <h2>Разработка и запуск успешной рекламной кампании</h2>
+          </div>
+          <div class="block__text">
+            <span>Разработка и реализация интегрированной рекламной кампании, которая привела к увеличению потока клиентов и повышению узнаваемости бренда.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="user__top-skills user__achievements">
+      <div class="top-skills__title achievement__title">
+        <h2>топ-навыки</h2>
+      </div>
+      <div class="top-skills__list achievement__list">
+        <div class="top-skills__block achievement__block">
+          <div class="block__title">
+            <h2>Управление продажами</h2>
+          </div>
+          <div class="block__text">
+            <span>Опыт в организации и управлении продажами, разработка стратегий продаж, планирование и анализ продаж, управление клиентской базой</span>
+          </div>
+        </div>
+        <div class="top-skills__block achievement__block">
+          <div class="block__title">
+            <h2>Навыки презентации</h2>
+          </div>
+          <div class="block__text">
+            <span>Умение эффективно представлять продукты и услуги, привлекать и удерживать внимание аудитории, убеждать и влиять на принятие решений.</span>
+          </div>
+        </div>
+        <div class="top-skills__block achievement__block">
+          <div class="block__title">
+            <h2>Руководство командой</h2>
+          </div>
+          <div class="block__text">
+            <span>Умение формировать и развивать команду, делегировать задачи, мотивировать сотрудников, проводить тренинги и семинары.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="user__skills user__achievements">
+      <div class="skill__title achievement__title">
+        <h2>навыки</h2>
+      </div>
+      <div class="skill__list achievement__list">
+        <ul class='skill__block achievement__block'>
+          <div class="block__title">
+            <h2>Менеджмент</h2>
+          </div>
+          <li>Управление продажами</li>
+          <li>Планирование и анализ продаж</li>
+          <li>Управление клиентской базой</li>
+          <li>Навыки общения и презентации</li>
+          <li>Умение убеждать и влиять на принятие решений</li>
+          <li>Руководство командой</li>
+        </ul>
+      </div>
+    </div>
+    <div class="user__work user__achievements">
+      <div class="work__title achievement__title">
+        <h2>опыт работы</h2>
+      </div>
+      <div class="work__list achievement__list">
+        <div class="work__block achievement__block">
+          <div class="block__prof">
+            <h2>Менеджер по продажам</h2>
+          </div>
+          <div class="block__place-age">
+            <span>Автосалон «АвтоМания» | г. Cамара</span>
+            <span>2019-н.в.</span>
+          </div>
+          <div class="block__text">
+            <span>
+              Управление отделом продаж и обеспечение достижения коммерческих целей. Создание и внедрение стратегий продаж. Работа с клиентами, выявление их потребностей. Контроль за выполнением плановых показателей. Управление командой продаж. Проведение презентаций продуктов компании. Работа с ключевыми клиентами.
+            </span>
+          </div>
+          <ul class='block__list'>
+            <div class="block__title-underline-thin">
+              <span>Обязанности:</span>
+            </div>
+            <li>Увеличение объема продаж автомобилей за счет привлечения новых клиентов</li>
+            <li>Создание и реализация программ лояльности для постоянных клиентов</li>
+          </ul>
+          <ul class='block__list'>
+            <div class="block__title-underline-thin">
+              <span>Достижения:</span>
+            </div>
+            <li>Выполнение плана продаж на 110% в 2020 году</li>
+            <li>Увеличение оборота компании на 15% в 2019 году</li>
+          </ul>
+        </div>
+        <div class="work__block achievement__block">
+          <div class="block__prof">
+            <h2>Менеджер по продажам</h2>
+          </div>
+          <div class="block__place-age">
+            <span>Автосалон «МоторЛэнд» | г. Cамара</span>
+            <span>2013-2018</span>
+          </div>
+          <div class="block__text">
+            <span>
+              Активный поиск и привлечение клиентов. Консультирование клиентов о товарах и услугах компании. Подбор автомобилей с учетом потребностей клиента.Проведение тест-драйвов. Заключение договоров и оформление сделок. Проведение переговоров с клиентами. Составление отчетности.
+            </span>
+          </div>
+          <ul class='block__list'>
+            <div class="block__title-underline-thin">
+              <span>Обязанности:</span>
+            </div>
+            <li>Расширение клиентской базы за счет активных продаж</li>
+            <li>Подготовка объявлений о продаже автомобилей</li>
+          </ul>
+          <ul class='block__list'>
+            <div class="block__title-underline-thin">
+              <span>Достижения:</span>
+            </div>
+            <li>Повышение объема продаж на 30% в 2018 году</li>
+            <li>Увеличение клиентской базы на 50% за период работы</li>
+          </ul>
+        </div>
+        <div class="work__block achievement__block">
+          <div class="block__prof">
+            <h2>Менеджер по продажам</h2>
+          </div>
+          <div class="block__place-age">
+            <span>Автосалон «Автоэксперт» | г. Cамара</span>
+            <span>2009-2012</span>
+          </div>
+          <div class="block__text">
+            <span>
+              Продажа новых и подержанных автомобилей. Управление клиентской базой. Активное общение с клиентами для выявления потребностей. Работа с ключевыми клиентами. Проведение презентаций автомобилей. Заключение договоров и оформление сделок. Проведение переговоров с клиентами.
+            </span>
+          </div>
+          <ul class='block__list'>
+            <div class="block__title-underline-thin">
+              <span>Обязанности:</span>
+            </div>
+            <li>Увеличение объема продаж за счет активного поиска клиентов</li>
+            <li>Удержание постоянных клиентов путем предоставления качественного сервиса</li>
+          </ul>
+          <ul class='block__list'>
+            <div class="block__title-underline-thin">
+              <span>Достижения:</span>
+            </div>
+            <li>Увеличение объема продаж на 20% в 2011 году</li>
+            <li>Интеграция автосалона в проект федерального дистрибьютора</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="user__study user__achievements">
+      <div class="study__title achievement__title">
+        <h2>образование, курсы и сертификаты</h2>
+      </div>
+      <div class="study__list achievement__list">
+        <div class="study__block achievement__block">
+          <div class="block__prof block__place">
+            <h2>Самарский Государственный Аэрокосмический Университет им. С.П. Королева</h2>
+          </div>
+          <div class="block__prof block__age">
+            <h2>2006 - 2010</h2>
+          </div>
+          <div class="block__text">
+            <span>
+              Закончил бакалавриат по специальности «Менеджмент» в Самарском Государственном Аэрокосмическом Университете им. С.П. Королева. Получил знания в области управления проектами, маркетинга и логистики, необходимые для успешной работы в сфере менеджмента продаж в автомобильной индустрии.
+            </span>
+          </div>
+        </div>
+        <div class="study__block achievement__block">
+          <div class="block__prof block__place">
+            <h2>Курс «Продажи: современные подходы и стратегии»</h2>
+          </div>
+          <div class="block__prof block__age">
+            <h2>Онлайн-платформа Skillbox (2015)</h2>
+          </div>
+          <div class="block__text">
+            <span>
+              Прошел онлайн-курс по продажам, который включал в себя изучение современных методов и стратегий продаж, работу с клиентами и управление продажами. Получил сертификат о прохождении.
+            </span>
+          </div>
+        </div>
+        <div class="study__block achievement__block">
+          <div class="block__prof block__place">
+            <h2>Курс «Эффективные продажи в автомобильной индустрии»</h2>
+          </div>
+          <div class="block__prof block__age">
+            <h2>Автомобильная бизнес-школа (2016)</h2>
+          </div>
+          <div class="block__text">
+            <span>
+              Прошел курс, специально разработанный для менеджеров по продажам в автомобильной индустрии. Изучил особенности автомобильного рынка, техники продаж конкретных моделей, а также эффективные способы привлечения и удержания клиентов.
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="user__row">
+      <div class="user__language">
+        <div class="language__title achievement__title">
+          <h2>языки</h2>
+        </div>
+        <div class="language__list achievement__list">
+          <div class="language__block achievement__block">
+            <div class="block__prof">
+              <h2>Английский</h2>
+            </div>
+            <div class="block__text mt-5">
+              <span>Свободное владение</span>
+            </div>
+          </div>
+          <div class="language__block achievement__block">
+            <div class="block__prof">
+              <h2>Русский</h2>
+            </div>
+            <div class="block__text mt-5">
+              <span>Родной язык</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user__interesting">
+        <div class="interesting__title achievement__title">
+          <h2>интересы</h2>
+        </div>
+        <div class="interesting__list achievement__list">
+          <div class="interesting__block achievement__block">
+            <div class="block__prof">
+              <h2>Автомобили</h2>
+            </div>
+          </div>
+          <div class="interesting__block achievement__block">
+            <div class="block__prof">
+              <h2>Спорт</h2>
+            </div>
+          </div>
+          <div class="interesting__block achievement__block">
+            <div class="block__prof">
+              <h2>Путешествия</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user__link">
+        <div class="link__title achievement__title">
+          <h2>ссылки</h2>
+        </div>
+        <div class="link__list achievement__list">
+          <div class="link__block achievement__block">
+            <div class="block__prof">
+              <h2>Пример работы</h2>
+            </div>
+            <div class="block__text">
+              <a href='#'>www.examplework.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="user__recommendation user__achievements">
+      <div class="recommendation__title achievement__title">
+        <h2>РЕКОМЕНДАЦИИ С ПРОШЛЫХ МЕСТ РАБОТЫ</h2>
+      </div>
+      <div class="recommendation__list achievement__list">
+        <div class="recommendation__block achievement__block">
+          <div class="block__prof">
+            <h2>Иван Иванов</h2>
+          </div>
+          <div class="block__prof">
+            <h2>АвтоКомпани / Генеральный директор</h2>
+          </div>
+          <div class="block__text">
+            <span>Телефон: +7 (987) 654-32-10</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
