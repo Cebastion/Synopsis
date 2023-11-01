@@ -252,6 +252,7 @@ ul li{
   text-transform: uppercase;
 }
 .user__description span{
+  letter-spacing: 1px;
   line-height: 20px;
   font-size: 18px;
   font-weight: 400;
@@ -269,6 +270,70 @@ ul li{
   font-size: 30px;
   font-weight: 800;
   color: #1f1e1e;
+}
+.achievement__block{
+  margin-top: 20px;
+}
+.block__title h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #1f1e1e;
+}
+.block__text span{
+  letter-spacing: 1px;
+  line-height: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f1e1e;
+}
+.block__title-thin{
+  margin-top: 20px;
+}
+.block__title-thin h2{
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f1e1e;
+}
+.block__place{
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.block__place span{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f1e1e;
+}
+.block__list{
+  margin: 20px 0;
+}
+.block__list p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1f1e1e;
+}
+.block__list ul li{
+  line-height: 20px;
+  margin: 0 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f1e1e;
+}
+.recommendation__prof{
+  margin: 5px 0;
+}
+.recommendation__name{
+  margin-top: 20px;
+}
+.language span{
+  text-transform: uppercase;
 }
 </style>
 <body>
@@ -413,6 +478,167 @@ ul li{
       <div class="user__achievements">
         <div class="achievement__title">
           <h2>топ-достижения</h2>
+        </div>
+        <div class="achievement__list">
+          <div class="achievement__block">
+            <div class="block__title">
+              <h2>Увеличение объема продаж</h2>
+            </div>
+            <div class="block__text">
+              <span>За последний год удалось увеличить объем продаж на 20% благодаря активной работе с клиентами и разработке новых стратегий маркетинга.</span>
+            </div>
+          </div>
+          <div class="achievement__block">
+            <div class="block__title">
+              <h2>Повышение уровня удовлетворенности клиентов</h2>
+            </div>
+            <div class="block__text">
+              <span>За время работы удалось улучшить уровень удовлетворенности клиентов на 15% путем разработки и внедрения программ лояльности и улучшения качества обслуживания.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user__top-skills">
+        <div class="achievement__title">
+          <h2>топ-навыки</h2>
+        </div>
+        <div class="top-skills__list">
+          <div class="achievement__block">
+            <div class="block__title">
+              <h2>Управление клиентскими отношениями</h2>
+            </div>
+            <div class="block__text">
+              <span>Умею эффективно коммуницировать с клиентами, налаживать отношения на долгосрочной основе и решать их проблемы.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user__work">
+        <div class="work__title achievement__title">
+          <h2>опыт работы / 1 год</h2>
+        </div>
+        <div class="work__block">
+          <div class="block__title-thin">
+            <h2>Менеджер по работе с клиентами</h2>
+          </div>
+          <div class="block__place">
+            <span>ООО Маркетинговое агентство «Профит»</span>
+            <span>2019-н.в.</span>
+          </div>
+          <div class="block__text">
+            <span>
+              Компания «Профит» является одним из ведущих маркетинговых агентств в Екатеринбурге. В мои обязанности входило обслуживание клиентов, продвижение продукции и услуг компании, разработка маркетинговых стратегий, поддержка клиентов в решении проблем и вопросов. Было ответственностью поддерживать хорошие отношения с клиентами, обрабатывать их заявки и обеспечивать высокий уровень обслуживания.
+            </span>
+          </div>
+          <div class="block__list">
+            <p>Обязанности:</p>
+            <ul>
+              <li>Обслуживание постоянных клиентов</li>
+              <li>Привлечение новых клиентов</li>
+              <li>Разработка и внедрение маркетинговых стратегий</li>
+              <li>Поддержка клиентов в решении проблем и вопросов</li>
+            </ul>
+          </div>
+          <div class="block__text">
+            <span>
+              В рамках работы в Маркетинговом агентстве '«Профит» я успешно реализовал ряд проектов. Один из них был связан с разработкой маркетинговой стратегии для клиента из сферы розничной торговли. Был разработан и внедрен комплексный подход к привлечению новых клиентов и увеличению продаж. Еще один интересный проект был связан с созданием и продвижением бренда на рынке услуг. Удалось увеличить узнаваемость бренда и привлечь новых клиентов.
+            </span>
+          </div>
+          <div class="block__list">
+            <p>Достижения:</p>
+            <ul>
+              <li>Увеличение объема продаж на 15%</li>
+              <li>Улучшение уровня удовлетворенности клиентов на 10%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="user__study">
+        <div class="study__title achievement__title">
+          <h2>образование, курсы и сертификаты</h2>
+        </div>
+        <div class="study__block">
+          <div class="block__title-thin">
+            <h2>Уральский государственный экономический университет</h2>
+          </div>
+          <div class="block__place">
+            <span>Бакалавр</span>
+            <span>2018-2022</span>
+          </div>
+          <div class="block__text">
+            <span>
+              Закончил бакалавриат по специальности Маркетинг. Во время учебы изучал основные принципы маркетинга, маркетинговые исследования, брендинг и продвижение товаров.
+            </span>
+          </div>
+        </div>
+        <div class="study__block">
+          <div class="block__title-thin">
+            <h2>Coursera</h2>
+          </div>
+          <div class="block__place">
+            <span>Онлайн курс</span>
+            <span>2022</span>
+          </div>
+          <div class="block__text">
+            <span>
+              Прошел курс по эффективной коммуникации с клиентами. Получил навыки ведения диалога и установления доверительных отношений с клиентами, а также разрешения конфликтов и удовлетворения потребностей клиентов.
+            </span>
+          </div>
+        </div>
+        <div class="study__block">
+          <div class="block__title-thin">
+            <h2>Udemy</h2>
+          </div>
+          <div class="block__place">
+            <span>Онлайн курс</span>
+            <span>2022</span>
+          </div>
+          <div class="block__text">
+            <span>
+              Прошел курс по эффективным продажам. Изучил основы взаимодействия с клиентами, разработку и внедрение маркетинговых стратегий, а также методы установления долгосрочных отношений с клиентами.
+            </span>
+          </div>
+        </div>
+        <div class="study__block">
+          <div class="block__title-thin">
+            <h2>Digital University</h2>
+          </div>
+          <div class="block__place">
+            <span>Онлайн курс</span>
+            <span>2022</span>
+          </div>
+          <div class="block__text">
+            <span>
+              Прошел сертификационный курс по основам маркетинга, включающий в себя изучение стратегического планирования, анализа рынка, позиционирования продукта и ценообразования.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="user__recommendation">
+        <div class="recommendation__title achievement__title">
+          <h2>рекомендации с прошлых мест работы</h2>
+        </div>
+        <div class="recommendation__block">
+          <div class="recommendation__name block__title">
+            <h2>Иван Петров</h2>
+          </div>
+          <div class="block__text recommendation__prof">
+            <span>Директор отдела продаж в компании «Marketing Solutions»</span>
+          </div>
+          <div class="block__text recommendation__phone">
+            <span>Телефон: +7912345678</span>
+          </div>
+        </div>
+        <div class="recommendation__block">
+          <div class="recommendation__name block__title">
+            <h2>Елена Сидорова</h2>
+          </div>
+          <div class="block__text recommendation__prof">
+            <span>Маркетинг-менеджер в «ABC Company»</span>
+          </div>
+          <div class="block__text recommendation__phone">
+            <span>Телефон: +79234567890</span>
+          </div>
         </div>
       </div>
     </div>

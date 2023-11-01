@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sysnopsis-5</title>
+</head>
+<style>
+  /*
+ font-family: 'Montserrat', sans-serif;
+  font-family: 'Arimo', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Space Mono', monospace;
+*/
+  @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&family=Roboto:wght@100;300;400;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  :focus,
+  :active {
+    outline: none;
+  }
+
+  a:focus,
+  a:active {
+    outline: none;
+  }
+
+  nav,
+  footer,
+  header,
+  aside {
+    display: block;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  input,
+  button,
+  textarea {
+    font-family: inherit;
+  }
+
+  input::-ms-clear {
+    display: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+
+  span,
+  a,
+  li,
+  label,
+  h1 {
+    font-family: 'Poppins';
+    color: wheat;
+  }
+
+  .wallaper {
+    display: flex;
+    margin: 0 auto;
+    width: 1400px;
+  }
+
+  .wallaper__left {
+    padding: 0 25px;
+    width: 550px;
+    border-left: 2px solid #1f1e1e;
+    border-right: 2px solid #1f1e1e;
+  }
+
+  .wallaper__right {
+    margin-left: 50px;
+    width: 700px;
+  }
+
+  .user__photo {
+    padding-top: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .user__age {
+    margin-top: 40px;
+  }
+
+  .user__age p {
+    margin: 5px 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #1f1e1e;
+  }
+
+  .user__contact,
+  .skill__title {
+    position: relative;
+    margin-top: 30px;
+  }
+
+  .contact__title h2,
+  .skill__title h2 {
+    display: flex;
+    letter-spacing: 3px;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: 800;
+    color: #1f1e1e;
+  }
+
+  .contact__title h2::after, .skill__title h2::after {
+    content: '';
+    top: 14px;
+    left: 120px;
+    display: block;
+    position: relative;
+    width: 140px;
+    height: 2px;
+    background-color: #1f1e1e;
+  }
+  .skill__title h2::after{
+    left: 170px;
+  }
+  .publish__title h2::after{
+    left: 70px;
+  }
+  .language__title h2::after{
+    left: 210px;
+  }
+  .interesting__title h2::after{
+    left: 128px;
+  }
+  .add-info__title h2::after{
+    display: none;
+  }
+  .contact__list{
+  margin: 20px 0 0 0;
+}
+.list{
+  display: flex;
+  align-items: center;
+}
+.list img{
+  width: 35px;
+  height: 35px;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+.list span{
+  margin: 8px 0 0;
+  font-family: 'Inter', sans-serif;
+  color: #1f1e1e;
+  font-size: 16px;
+  font-weight: 500;
+}
+ul p{
+  display: inline-block;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  color: #1f1e1e;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+ul li{
+  margin: 5px 0;
+  margin-left: 30px;
+  font-family: 'Inter', sans-serif;
+  color: #1f1e1e;
+  font-size: 16px;
+  font-weight: 500;
+}
+.publish__block{
+  margin-top: 30px;
+}
+.publish__block-title span{
+  display: inline-block;
+  width: 300px;
+  font-size: 20px;
+  font-weight: 800;
+  font-family: 'Inter', sans-serif;
+  color: #1f1e1e;
+}
+.publish__text span{
+  display: inline-block;
+  margin: 5px 0;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  color: #1f1e1e;
+}
+.publish__link a{
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
+  color: #1f1e1e;
+  text-decoration: underline;
+}
+.language__block, .interesting__list{
+  margin: 20px 0 0;
+}
+.interesting__list p {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  color: #1f1e1e;
+}
+.language span{
+  text-transform: uppercase;
+}
+.user__name{
+  margin-top: 100px;
+}
+.user__name h1{
+  font-family: 'Inter', sans-serif;
+  color: #1f1e1e;
+  font-size: 58px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.user__prof{
+  margin-top: 30px;
+  padding-bottom: 60px;
+}
+.user__description{
+  margin-top: 20px;
+}
+.user__prof h2{
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 3px;
+  color: #1f1e1e;
+  font-size: 29px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.user__description span{
+  letter-spacing: 1px;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #737373;
+  font-family: 'Inter', sans-serif;
+}
+.achievement__title{
+  margin-top: 30px;
+  padding-bottom: 10px;
+}
+.achievement__title h2{
+  letter-spacing: 3px;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 800;
+  color: #1f1e1e;
+}
+.achievement__block{
+  margin-top: 20px;
+}
+.block__title h2{
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #737373;
+}
+.block__text span{
+  letter-spacing: 1px;
+  line-height: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #737373;
+}
+.block__title-thin{
+  margin-top: 20px;
+}
+.block__title-thin h2{
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 600;
+  color: #1f1e1e;
+}
+.block__title-thin p{
+  margin: 10px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f1e1e;
+}
+.block__place{
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.block__place span{
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #737373;
+}
+.block__list{
+  margin: 20px 0;
+}
+.block__list p{
+  text-decoration: underline;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #737373;
+}
+.block__list ul li{
+  line-height: 20px;
+  margin: 0 30px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: #737373;
+}
+.block__coloum{
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+.age{
+  display: flex;
+  text-orientation: upright;
+  width: fit-content; 
+  white-space: nowrap;
+    border: 1px solid #1f1e1e;
+    height: 100%;
+    width: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.age span{
+  transform: rotate(270deg);
+  letter-spacing: 1px;
+  line-height: 20px;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #737373;
+}
+.block__coloum .coloum:last-child{
+  margin: 0 0 0 20px;
+}
+.recommendation__block{
+  margin-top: 30px;
+}
+</style>
+
+<body>
+  <div class="wallaper">
+    <div class="wallaper__left">
+      <div class="user__info">
+        <div class="user__photo">
+          <img src="./img/4/1.png" alt="">
+        </div>
+        <div class="user__age">
+          <p>Дата рождения: 15.09.1990</p>
+          <p>Возраст: 31 год</p>
+        </div>
+        <div class="user__contact">
+          <div class="contact__title">
+            <h2>контакты</h2>
+          </div>
+          <div class="contact__list">
+            <div class='list'>
+              <img src="./img/5/4.png" alt="">
+              <span>+7(912)345-67-89</span>
+            </div>
+            <div class='list'>
+              <img src="./img/5/3.png" alt="">
+              <span>ivanov.alex@gmail.com</span>
+            </div>
+            <div class='list'>
+              <img src="./img/5/2.png" alt="">
+              <span>ivanov.com</span>
+            </div>
+            <div class='list'>
+              <img src="./img/5/5.png" alt="">
+              <span>Екатеринбург, ул. Ленина 10</span>
+            </div>
+            <div class='list'>
+              <img src="./img/5/7.png" alt="">
+              <span>linkedin.com/ivanov</span>
+            </div>
+            <div class='list'>
+              <img src="./img/5/6.png" alt="">
+              <span>ivanov.com/blog</span>
+            </div>
+          </div>
+        </div>
+        <div class="user__skills">
+          <div class="skill__title">
+            <h2>навыки</h2>
+          </div>
+          <div class="skill__list">
+            <ul>
+              <p>Коммуникация</p>
+              <li>Активное слушание</li>
+              <li>Убедительная речь</li>
+              <li>Эмпатия</li>
+            </ul>
+            <ul>
+              <p>Адаптация</p>
+              <li>Гибкость</li>
+              <li>Быстрая обучаемость</li>
+              <li>Умение работать в команде</li>
+            </ul>
+            <ul>
+              <p>Аналитическое мышление</p>
+              <li>Оценка потребностей клиентов</li>
+              <li>Анализ данных</li>
+              <li>Принятие решений</li>
+            </ul>
+          </div>
+        </div>
+        <div class="user__add-info">
+          <div class="add-info__title skill__title">
+            <h2>дополнительная информация</h2>
+          </div>
+          <ul>
+            <li>Водительские права категории B</li>
+            <li>Готов к командировкам</li>
+          </ul>
+        </div>
+        <div class="user__publish">
+          <div class="publish__title skill__title">
+            <h2>публикации</h2>
+          </div>
+          <div class="publish__block">
+            <div class="publish__block-title">
+              <span>Эффективные стратегии продвижения товаров</span>
+            </div>
+            <div class="publish__text">
+              <span>Маркетинговый журнал (Декабрь, 2022)</span>
+            </div>
+            <div class="publish__link">
+              <a href="#">example.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="user__language">
+          <div class="language__title skill__title">
+            <h2>языки</h2>
+          </div>
+          <div class="language__list">
+            <div class="language__block">
+              <div class="language publish__block-title">
+                <span>Английский</span>
+              </div>
+              <div class="level publish__text">
+                <span>Уровень: свободное владение</span>
+              </div>
+            </div>
+            <div class="language__block">
+              <div class="language publish__block-title">
+                <span>немецкий</span>
+              </div>
+              <div class="level publish__text">
+                <span>Уровень: базовый уровень</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="user__interesting">
+          <div class="interesting__title skill__title">
+            <h2>интересы</h2>
+          </div>
+          <div class="interesting__list">
+            <p>Спорт</p>
+            <p>Чтение</p>
+            <p>Путешествия</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wallaper__right">
+      <div class="user__name">
+        <h1>александр иванов</h1>
+      </div>
+      <div class="user__prof">
+        <h2>менеджер по работе с клиентами</h2>
+      </div>
+      <div class="user__description">
+        <span>
+          Здравствуйте, меня зовут Александр Иванов и я опытный менеджер по работе с клиентами. Мне нравится взаимодействовать с людьми и решать их проблемы, поэтому эту работу я выбрал для себя. Моя цель - обеспечить наивысший уровень удовлетворенности клиентов, предлагая им качественные услуги и эффективное решение их проблем.
+        </span>
+      </div>
+      <div class="user__achievements">
+        <div class="achievement__title">
+          <h2>топ-достижения</h2>
+        </div>
+        <div class="achievement__list">
+          <div class="achievement__block">
+            <div class="block__title">
+              <h2>Увеличение объема продаж</h2>
+            </div>
+            <div class="block__text">
+              <span>За последний год удалось увеличить объем продаж на 20% благодаря активной работе с клиентами и разработке новых стратегий маркетинга.</span>
+            </div>
+          </div>
+          <div class="achievement__block">
+            <div class="block__title">
+              <h2>Повышение уровня удовлетворенности клиентов</h2>
+            </div>
+            <div class="block__text">
+              <span>За время работы удалось улучшить уровень удовлетворенности клиентов на 15% путем разработки и внедрения программ лояльности и улучшения качества обслуживания.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user__top-skills">
+        <div class="achievement__title">
+          <h2>топ-навыки</h2>
+        </div>
+        <div class="top-skills__list">
+          <div class="achievement__block">
+            <div class="block__title">
+              <h2>Управление клиентскими отношениями</h2>
+            </div>
+            <div class="block__text">
+              <span>Умею эффективно коммуницировать с клиентами, налаживать отношения на долгосрочной основе и решать их проблемы.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user__work">
+        <div class="work__title achievement__title">
+          <h2>опыт работы</h2>
+        </div>
+        <div class="work__block">
+          <div class="block__coloum">
+            <div class="coloum">
+              <div class="age">
+                <span>2019 - настоящее время</span>
+              </div>
+            </div>
+            <div class="coloum">
+              <div class="work__block">
+                <div class="block__title-thin">
+                  <h2>Менеджер по работе с клиентами</h2>
+                  <p>ООО Маркетинговое агентство «Профит»</p>
+                </div>
+                <div class="block__text">
+                  <span>
+                    Компания «Профит» является одним из ведущих маркетинговых агентств в Екатеринбурге. В мои обязанности входило обслуживание клиентов, продвижение продукции и услуг компании, разработка маркетинговых стратегий, поддержка клиентов в решении проблем и вопросов. Было ответственностью поддерживать хорошие отношения с клиентами, обрабатывать их заявки и обеспечивать высокий уровень обслуживания.
+                  </span>
+                </div>
+                <div class="block__list">
+                  <p>Обязанности:</p>
+                  <ul>
+                    <li>Обслуживание постоянных клиентов</li>
+                    <li>Привлечение новых клиентов</li>
+                    <li>Разработка и внедрение маркетинговых стратегий</li>
+                    <li>Поддержка клиентов в решении проблем и вопросов</li>
+                  </ul>
+                </div>
+                <div class="block__text">
+                  <span>
+                    В рамках работы в Маркетинговом агентстве '«Профит» я успешно реализовал ряд проектов. Один из них был связан с разработкой маркетинговой стратегии для клиента из сферы розничной торговли. Был разработан и внедрен комплексный подход к привлечению новых клиентов и увеличению продаж. Еще один интересный проект был связан с созданием и продвижением бренда на рынке услуг. Удалось увеличить узнаваемость бренда и привлечь новых клиентов.
+                  </span>
+                </div>
+                <div class="block__list">
+                  <p>Достижения:</p>
+                  <ul>
+                    <li>Увеличение объема продаж на 15%</li>
+                    <li>Улучшение уровня удовлетворенности клиентов на 10%</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user__study">
+        <div class="study__title achievement__title">
+          <h2>образование</h2>
+        </div>
+        <div class="study__block">
+          <div class="block__coloum">
+            <div class="coloum">
+              <div class="age">
+                <span>2018-2022</span>
+              </div>
+            </div>
+            <div class="coloum">
+              <div class="block__title-thin">
+                <h2>Уральский государственный экономический университет</h2>
+                <p>Бакалавр</p>
+              </div>
+              <div class="block__text">
+                <span>
+                  Закончил бакалавриат по специальности Маркетинг. Во время учебы изучал основные принципы маркетинга, маркетинговые исследования, брендинг и продвижение товаров.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user__course">
+        <div class="course__title achievement__title">
+          <h2>курсы и сертификаты</h2>
+        </div>
+        <div class="study__block">
+          <div class="block__coloum">
+            <div class="coloum">
+              <div class="age">
+                <span>2022</span>
+              </div>
+            </div>
+            <div class="coloum">
+              <div class="block__title-thin">
+                <h2>Coursera</h2>
+                <p>Онлайн курс</p>
+              </div>
+              <div class="block__text">
+                <span>
+                  Прошел курс по эффективной коммуникации с клиентами. Получил навыки ведения диалога и установления доверительных отношений с клиентами, а также разрешения конфликтов и удовлетворения потребностей клиентов.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="block__coloum">
+            <div class="coloum">
+              <div class="age">
+                <span>2022</span>
+              </div>
+            </div>
+            <div class="coloum">
+              <div class="block__title-thin">
+                <h2>Udemy</h2>
+                <p>Онлайн курс</p>
+              </div>
+              <div class="block__text">
+                <span>
+                  Прошел курс по эффективным продажам. Изучил основы взаимодействия с клиентами, разработку и внедрение маркетинговых стратегий, а также методы установления долгосрочных отношений с клиентами.
+                </span>
+              </div>
+            </div>
+          </div>
+          <div class="block__coloum">
+            <div class="coloum">
+              <div class="age">
+                <span>2022</span>
+              </div>
+            </div>
+            <div class="coloum">
+              <div class="block__title-thin">
+                <h2>Digital University</h2>
+                <p>Онлайн курс</p>
+              </div>
+              <div class="block__text">
+                <span>
+                  Прошел сертификационный курс по основам маркетинга, включающий в себя изучение стратегического планирования, анализа рынка, позиционирования продукта и ценообразования.
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="user__recommendation">
+        <div class="recommendation__title achievement__title">
+          <h2>рекомендации с прошлых мест работы</h2>
+        </div>
+        <div class="recommendation__block">
+          <div class="recommendation__name block__title">
+            <h2>Иван Петров</h2>
+          </div>
+          <div class="block__text recommendation__prof">
+            <span>Директор отдела продаж в компании «Marketing Solutions»</span>
+          </div>
+          <div class="block__text recommendation__phone">
+            <span>Телефон: +7912345678</span>
+          </div>
+        </div>
+        <div class="recommendation__block">
+          <div class="recommendation__name block__title">
+            <h2>Елена Сидорова</h2>
+          </div>
+          <div class="block__text recommendation__prof">
+            <span>Маркетинг-менеджер в «ABC Company»</span>
+          </div>
+          <div class="block__text recommendation__phone">
+            <span>Телефон: +79234567890</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
