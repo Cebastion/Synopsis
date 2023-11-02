@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sysnopsis-2</title>
+</head>
+<style>
+  /*font-family: 'Inter', sans-serif;
+  font-family: 'Space Mono', monospace;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;*/
+  @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  :focus,
+  :active {
+    outline: none;
+  }
+
+  a:focus,
+  a:active {
+    outline: none;
+  }
+
+  nav,
+  footer,
+  header,
+  aside {
+    display: block;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  input,
+  button,
+  textarea {
+    font-family: inherit;
+  }
+
+  input::-ms-clear {
+    display: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+
+  span,
+  a,
+  li,
+  label,
+  h1 {
+    font-family: 'Poppins';
+    color: wheat;
+  }
+
+  .description span,
+  .description {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 20px;
+    line-height: 25px;
+    color: #575757;
+  }
+
+  .wallaper {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .dashboard__coloum-wieght {
+    width: 700px;
+  }
+
+  .dashboard__coloum-small {
+    padding: 30px;
+    background-color: #ebebeb;
+    width: 350px;
+  }
+
+  .user__name h1 {
+    margin: 100px 0 20px;
+    text-align: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+    text-transform: uppercase;
+    color: #575757;
+    font-size: 64px;
+  }
+
+  .user__prof h2 {
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Hanken Grotesk', sans-serif;
+    text-transform: uppercase;
+    color: #575757;
+    font-size: 20px;
+  }
+
+  .dashboard__age p {
+    font-family: 'Roboto', sans-serif;
+    color: #575757;
+    font-size: 16px;
+  }
+
+  .dashboard__age p {
+    margin-bottom: 30px;
+  }
+
+  .dashboard__card {
+    width: 100%;
+    border-bottom: #575757 2px dashed;
+    padding-bottom: 15px;
+  }
+
+  .dashboard__title h2 {
+    margin: 40px 0 20px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    color: #575757;
+    font-size: 30px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+  }
+
+  .contact__li {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .contact__li img {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+  }
+
+
+  .contact__li span {
+    font-family: 'Roboto', sans-serif;
+    color: #575757;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .user__dashboard {
+    border-top: 1px solid #575757;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .dashboard__description {
+    margin-bottom: 10px;
+  }
+
+  .dashboard__prof {
+    margin-top: 20px;
+  }
+
+  .dashboard__prof span {
+    font-family: 'Roboto', sans-serif;
+    color: #575757;
+    font-size: 25px;
+    font-weight: 800;
+  }
+
+  .dashboard__place {
+    margin: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dashboard__place span {
+    font-family: 'Roboto', sans-serif;
+    color: #575757;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  .dashboard__place span:last-child {
+    margin-right: 50px;
+  }
+
+  ul li {
+    margin-left: 25px;
+    color: #575757;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+
+  .bold {
+    font-weight: 800;
+  }
+
+  .top-line {
+    border-top: 2px dashed #575757;
+  }
+
+  .card__block {
+    margin-bottom: 5px;
+  }
+</style>
+
+<body>
+  <main class="wallaper">
+    <header class="header">
+      <div class="user__name">
+        <h1>{personal_details.first_name} {personal_details.last_name}</h1>
+      </div>
+      <div class="user__prof">
+        <h2 style='letter-spacing: 5px;'>{PositionName} | Стаж: {experience_summary.Years} лет</h2>
+      </div>
+    </header>
+    <div class="user__dashboard">
+      <div class="dashboard__coloum-small">
+        <div class="dashboard__block">
+          <div class="dashboard__card">
+            <div class="dashboard__age">
+              <p>Возраст: {personal_details.Age} лет</p>
+              <p>Дата рождения: {personal_details.Dob}</p>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__card">
+            <div class="dashboard__title">
+              <h2>Контакты</h2>
+            </div>
+            <div class="dashboard__contact">
+              <div class="contact__li">
+                <img src="./img/2/1.png" alt="" class="contact__icon">
+                <span>{personal_details.Phone}</span>
+              </div>
+              <div class="contact__li">
+                <img src="./img/2/2.png" alt="" class="contact__icon">
+                <span>{personal_details.Email}</span>
+              </div>
+              <div class="contact__li">
+                <img src="./img/2/5.png" alt="" class="contact__icon">
+                <span>{Links.Url}</span>
+              </div>
+              <div class="contact__li">
+                <img src="./img/2/4.png" alt="" class="contact__icon">
+                <span>{personal_details.City}, {personal_details.Address}</span>
+              </div>
+              <div class="contact__li">
+                <img src="./img/2/3.png" alt="" class="contact__icon">
+                <span>{personal_details.Website}</span>
+              </div>
+              <div class="contact__li">
+                <img src="./img/2/6.png" alt="" class="contact__icon">
+                <span>{personal_details.Linkedin}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__card">
+            <p style='margin: 10px 0 0;' class="description">{additional_info}</p>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Языки</h2>
+          </div>
+          <div class="dashboard__card">
+            <p class="description" style='font-weight: 600;'>{Languages.Name}</p>
+            <p class="description" style='margin: 5px 0 15px; font-weight: 300;'>Уровень: {Languages.Level}</p>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2 style='font-weight: 600;'>Увлечения</h2>
+          </div>
+          <div class="dashboard__card">
+            <p style='font-weight: 500;' class="description">{interests_activities}</p>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Рекомендации с прошлых мест работы</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="card__block">
+              <p class='description' style='display: block; width: 300px;'>
+                {References.Position},
+                {References.Company}
+              </p>
+              <p class='description' style='font-weight: 600; margin: 10px 0;'>{References.Name}</p>
+              <p class='description'>Телефон: {References.contact_info}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard__coloum-wieght">
+        <div class="dashboard__block">
+          <div class="dashboard__card">
+            <span class='description' style='display: inline-block;'>{Introduction} {Objectives}</span>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Топ-достижения</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__prof">
+              <span class='description' style='font-weight: 800;'>{TopAchievements.Title}</span>
+            </div>
+            <div class="dashboard__description description" style='margin-top: 10px;'>
+              <span>{TopAchievements.Description}</span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Топ-навыки</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__prof">
+              <span class='description' style='font-weight: 800; font-size: 20px;'>{TopSkills.Title}</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>{TopSkills.Description}</span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Опыт работы</h2>
+          </div>
+          <div class="card__block">
+            <div class="dashboard__prof">
+              <span>{work_experience.Position}</span>
+            </div>
+            <div class="dashboard__place">
+              <span>{work_experience.City} | {work_experience.Company}</span>
+              <span>{work_experience.start_date} - {work_experience.end_date}</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>{work_experience.FullDescription}</span>
+              <ul>
+                <p class='bold'>Обязанности:</p>
+                <li>{work_experience.Responsibilities}</li>
+              </ul>
+              <ul>
+                <p class='bold'>Достижения:</p>
+                <li>{work_experience.Achievements}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block top-line">
+          <div class="dashboard__title">
+            <h2>Образование</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="card__block">
+              <div class="dashboard__prof">
+                <span style='width: 300px;'>{Education.Institution}</span>
+              </div>
+              <div class="dashboard__place">
+                <span>{Education.Degree} | {Education.Country}</span>
+                <span>{Education.start_date}-{Education.end_date}</span>
+              </div>
+              <div class="dashboard__description description">
+                <span>{Education.Description}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Сертификаты и курсы</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="card__block">
+              <div class="dashboard__prof">
+                <span>{Education.Institution}</span>
+              </div>
+              <div class="dashboard__place">
+                <span>{Education.Degree} | {Education.Country}</span>
+                <span>{Education.start_date}</span>
+              </div>
+              <div class="dashboard__description description">
+                <span>{Education.Description}</span>
+              </div>
+            </div>
+            <div class="card__block">
+              <div class="dashboard__prof">
+                <span>Международная Ассоциация Перевозчиков</span>
+              </div>
+              <div class="dashboard__place">
+                <span>{Education.Degree} | {Education.Country}</span>
+                <span>{Certifications.Date}</span>
+              </div>
+              <div class="dashboard__description description">
+                <span>{Certifications.Description}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

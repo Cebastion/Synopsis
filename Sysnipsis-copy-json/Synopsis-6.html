@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sysnopsis-6</title>
+</head>
+<style>
+  /*
+  font-family: 'Arimo', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Space Mono', monospace;
+  font-family: 'PT Serif', serif;
+*/
+  @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:wght@100;300;400;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  :focus,
+  :active {
+    outline: none;
+  }
+
+  a:focus,
+  a:active {
+    outline: none;
+  }
+
+  nav,
+  footer,
+  header,
+  aside {
+    display: block;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  input,
+  button,
+  textarea {
+    font-family: inherit;
+  }
+
+  input::-ms-clear {
+    display: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+
+  span,
+  a,
+  li,
+  label,
+  h1 {
+    font-family: 'Poppins';
+    color: wheat;
+  }
+
+  .wallaper {
+    max-width: 1240px;
+    margin: 0 auto;
+  }
+
+  .user__name h1 {
+    font-weight: 400;
+    margin: 100px 0 20px;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    color: #004aad;
+    font-size: 64px;
+  }
+
+  .user__prof h2 {
+    font-style: italic;
+    font-weight: 400;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'PT Serif', serif;
+    color: #404040;
+    font-size: 20px;
+  }
+
+  .contact__li {
+    margin: 5px 0;
+  }
+
+  .contact__li {
+    display: flex;
+    align-items: center;
+    margin: 5px 0 5px 30px;
+  }
+
+  .contact__li img {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact__li span {
+    font-family: 'PT Serif', serif;
+    color: #404040;
+    font-size: 16px;
+  }
+
+  .user__contact {
+    padding: 10px 0;
+    border-top: 1px solid #404040;
+    border-bottom: 1px solid #404040;
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr 1fr;
+  }
+
+  .user__info {
+    margin-top: 20px;
+  }
+
+  .user__info span {
+    letter-spacing: 1px;
+    line-height: 25px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'PT Serif', serif;
+    color: #404040;
+  }
+
+  .container {
+    padding: 0 50px;
+  }
+
+  .achievement__title {
+    margin-top: 30px;
+  }
+
+  .achievement__title h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #004aad;
+  }
+
+  .coloum {
+    width: 50%;
+  }
+
+  .block__title {
+    margin-top: 20px;
+  }
+
+  .block__title h2 {
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    color: #404040;
+    text-decoration: underline;
+  }
+
+  .block__text span {
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    color: #404040;
+  }
+
+  .add-info__block {
+    margin-top: 20px;
+  }
+
+  ul li {
+    margin: 5px 0;
+    margin-left: 30px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    color: #404040;
+  }
+
+  .block__link a {
+    text-decoration: underline;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    color: #404040;
+  }
+
+  .user__coloum {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .work__title h2 {
+    text-align: center;
+  }
+
+  .block__title-thin {
+    position: relative;
+  }
+
+  .block__title-thin h2 {
+    display: flex;
+    letter-spacing: 1px;
+    line-height: 20px;
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    font-weight: 700;
+    color: #404040;
+  }
+
+  .block__title-thin h2::before {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #404040;
+    left: -41px;
+  }
+
+  .block__title-thin span {
+    font-style: italic;
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    color: #404040;
+  }
+
+  .block__row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .work__block {
+    border-left: 1px solid #404040;
+    padding-left: 30px;
+  }
+
+  .block__place {
+    margin: 10px 0;
+  }
+
+  .block__place span {
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+    font-weight: 400;
+    color: #404040;
+  }
+
+  .withoutline h2 {
+    text-decoration: none;
+  }
+
+  .study__body {
+    margin-top: 20px;
+  }
+  .interesting__list{
+    margin-top: 20px;
+  }
+</style>
+
+<body>
+  <div class="wallaper">
+    <div class="header">
+      <div class="user__name">
+        <h1>{personal_details.first_name} {personal_details.last_name}</h1>
+      </div>
+      <div class="user__prof">
+        <h2>{PositionName}</h2>
+      </div>
+      <div class="user__contact">
+        <div class="contact__li" style='order: 3;'>
+          <img src="./img/6/5.png" alt="" class="contact__icon">
+          <span>{personal_details.Website}</span>
+        </div>
+        <div class="contact__li" style='order: 6;'>
+          <img src="./img/6/1.png" alt="" class="contact__icon">
+          <span>{personal_details.Linkedin}</span>
+        </div>
+        <div class="contact__li" style='order: 2;'>
+          <img src="./img/6/4.png" alt="" class="contact__icon">
+          <span>{personal_details.Phone}</span>
+        </div>
+        <div class="contact__li" style='order: 1;'>
+          <img src="./img/6/3.png" alt="" class="contact__icon">
+          <span>{personal_details.Email}</span>
+        </div>
+        <div class="contact__li" style='order: 7;'>
+          <img src="./img/6/6.png" alt="" class="contact__icon">
+          <span>{Links.Url}</span>
+        </div>
+        <div class="contact__li" style='order: 5;'>
+          <img src="./img/6/2.png" alt="" class="contact__icon">
+          <span>{personal_details.City}, {personal_details.Address}</span>
+        </div>
+        <div class="contact__li" style='order: 4;'>
+          <span>Дата рождения: {personal_details.Dob}</span>
+        </div>
+        <div class="contact__li" style='order: 8;'>
+          <span>Возраст: {personal_details.Age} год</span>
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="container">
+        <div class="user__info">
+          <div class="user__description">
+            <span>
+              {Introduction} {Objectives}
+            </span>
+          </div>
+        </div>
+        <div class="user__coloum">
+          <div class="coloum">
+            <div class="user__achievement">
+              <div class="achievement__title">
+                <h2>Топ-достижения</h2>
+              </div>
+              <div class="achievement__block">
+                <div class="block__title">
+                  <h2>{TopAchievements.Title}</h2>
+                </div>
+                <div class="block__text">
+                  <span>
+                    {TopAchievements.Description}
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="user__add-info">
+              <div class="add-info__title achievement__title">
+                <h2>Дополнительная информация</h2>
+              </div>
+              <ul class="add-info__block">
+                <li>{additional_info}</li>
+              </ul>
+            </div>
+            <div class="user__publish">
+              <div class="publish__title achievement__title">
+                <h2>Публикации</h2>
+              </div>
+              <div class="publish__block">
+                <div class="block__title">
+                  <h2>{Publications.Title}</h2>
+                </div>
+                <div class="block__text">
+                  <span>{Publications.Publisher} ({Publications.Date})</span>
+                </div>
+                <div class="block__link">
+                  <a href="#">{Publications.Url}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="coloum">
+            <div class="user__top-skills">
+              <div class="top-skills__title achievement__title">
+                <h2>Топ-навыки</h2>
+              </div>
+              <div class="top-skills__list">
+                <div class="top-skills__block">
+                  <div class="block__title">
+                    <h2>{TopSkills.Title}</h2>
+                  </div>
+                  <div class="block__text">
+                    <span>
+                      {TopSkills.Description}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="user__skills">
+              <div class="skills__title achievement__title">
+                <h2>Навыки</h2>
+              </div>
+              <div class="skills__list">
+                <ul class="skills__block">
+                  <div class="block__title">
+                    <h2>{Skills.skills_group_name}</h2>
+                  </div>
+                  <li>{Skills.Skills}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="user__work">
+          <div class="work__title achievement__title">
+            <h2>Опыт работы</h2>
+          </div>
+          <div class="work__block">
+            <div class="work__body study__body">
+              <div class="block__title-thin block__row">
+                <h2>{work_experience.Position}</h2>
+                <span>{work_experience.start_date} - {work_experience.end_date}</span>
+              </div>
+              <div class="block__place">
+                <span>{work_experience.Company}</span>
+              </div>
+              <div class="block__text">
+                <span>
+                  {work_experience.FullDescription}
+                </span>
+              </div>
+              <ul class="block__list">
+                <div class="block__title withoutline">
+                  <h2>Обязанности:</h2>
+                  <li>{work_experience.Responsibilities}</li>
+                </div>
+              </ul>
+              <div class="block__text">
+                <span>
+                  {work_experience.Description}
+                </span>
+              </div>
+              <ul class="block__list">
+                <div class="block__title withoutline">
+                  <h2>Достижения:</h2>
+                  <li>{work_experience.Achievements}</li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="user__study">
+          <div class="study__title work__title achievement__title">
+            <h2>Образование, курсы и сертификаты</h2>
+          </div>
+          <div class="study__block work__block">
+            <div class="study__body">
+              <div class="block__title-thin block__row">
+                <h2>{Education.Institution}</h2>
+                <span>{Education.start_date}</span>
+              </div>
+              <div class="block__place">
+                <span>{Education.Degree}</span>
+              </div>
+              <div class="block__text">
+                <span>
+                  {Education.Description}
+                </span>
+              </div>
+            </div>
+            <div class="study__body">
+              <div class="block__title-thin block__row">
+                <h2>{Certifications.Institution}</h2>
+                <span>{Certifications.Date}</span>
+              </div>
+              <div class="block__place">
+                <span>{Education.Degree}</span>
+              </div>
+              <div class="block__text">
+                <span>
+                  {Certifications.Description}
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="user__coloum">
+          <div class="coloum">
+            <div class="user__language">
+              <div class="language__title achievement__title">
+                <h2>Языки</h2>
+              </div>
+              <div class="language__block">
+                <div class="language__body">
+                  <div class="block__title">
+                    <h2>{Languages.Name}</h2>
+                  </div>
+                  <div class="block__text">
+                    <span>Уровень: {Languages.Level}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="coloum">
+            <div class="user__interesting">
+              <div class="interesting__title achievement__title">
+                <h2>Интересы</h2>
+              </div>
+              <div class="interesting__list">
+                <div class="block__text">
+                  <span>{interests_activities}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="user__recommendation">
+          <div class="recommendation__title achievement__title work__title">
+            <h2>Рекомендации с прошлых мест работы</h2>
+          </div>
+          <div class="recommendation__list">
+            <div class="recommendation__block">
+              <div class="block__title withoutline recommendation__name">
+                <h2>{References.Name}</h2>
+              </div>
+              <div class="block__text recommendation__place">
+                <span>{References.Position} в компании «{References.Company}»</span>
+              </div>
+              <div class="block__text recommendation__phone">
+                <span>Телефон: {References.contact_info}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

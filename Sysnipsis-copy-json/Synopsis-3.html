@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sysnopsis-3</title>
+</head>
+
+<style>
+  /*
+  font-family: 'Arimo', sans-serif;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Space Mono', monospace;
+*/
+  @import url('https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Hanken+Grotesk:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500;6..12,600;6..12,700;6..12,800;6..12,900;6..12,1000&family=Roboto:wght@100;300;400;500;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+    border: 0;
+  }
+
+  *,
+  *:before,
+  *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  :focus,
+  :active {
+    outline: none;
+  }
+
+  a:focus,
+  a:active {
+    outline: none;
+  }
+
+  nav,
+  footer,
+  header,
+  aside {
+    display: block;
+  }
+
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  input,
+  button,
+  textarea {
+    font-family: inherit;
+  }
+
+  input::-ms-clear {
+    display: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  a,
+  a:visited {
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  img {
+    vertical-align: top;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: inherit;
+    font-weight: 400;
+  }
+
+  span,
+  a,
+  li,
+  label,
+  h1 {
+    font-family: 'Poppins';
+    color: wheat;
+  }
+
+  .wallaper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .header {
+    padding-bottom: 20px;
+    border-bottom: #444440 solid 1px;
+  }
+
+  .user__name h1 {
+    font-weight: 800;
+    letter-spacing: 10px;
+    margin: 100px 0 20px;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+    color: #444440;
+    font-size: 64px;
+  }
+
+  .user__prof h2 {
+    font-weight: 700;
+    letter-spacing: 10px;
+    margin-bottom: 50px;
+    text-align: center;
+    font-family: 'Nunito Sans', sans-serif;
+    text-transform: uppercase;
+    color: #444440;
+    font-size: 20px;
+  }
+
+  .contact__li {
+    margin: 5px 0;
+  }
+
+  .contact__li {
+    display: flex;
+    align-items: center
+  }
+
+  .contact__li img {
+    margin-right: 10px;
+    width: 25px;
+    height: 25px;
+  }
+
+  .contact__li span {
+    font-family: 'Arimo', sans-serif;
+    color: #444440;
+    font-size: 16px;
+  }
+
+  .user__contact {
+    margin: 0 auto;
+    display: grid;
+    grid-template: 1fr 1fr / 1fr 1fr 1fr;
+  }
+
+  .user__photo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: #444440 solid 2px;
+  }
+
+  .user__info {
+    margin: 40px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .user__description .user__age span {
+    display: inline-block;
+    margin-bottom: 30px;
+    font-weight: 800;
+    font-family: 'Arimo', sans-serif;
+    color: #444440;
+    font-size: 16px;
+  }
+
+  .user__description {
+    width: 700px;
+  }
+
+  .user__description span {
+    font-weight: 400;
+    font-family: 'Arimo', sans-serif;
+    color: #444440;
+    font-size: 16px;
+  }
+
+  .user__dashboard {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .dashboard__coloum-wieght {
+    border-top: #444440 1px solid;
+    border-left: #444440 1px solid;
+    width: 700px;
+  }
+
+  .dashboard__coloum-small {
+    border-top: #444440 1px solid;
+    width: 300px;
+  }
+
+  .dashboard__title h2 {
+    margin-top: 30px;
+    font-weight: 800;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #444440;
+    font-size: 30px;
+  }
+
+  .dashboard__study {
+    margin: 30px 0 10px;
+  }
+
+  .dashboard__study span {
+    font-weight: 800;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #444440;
+    font-size: 17px;
+  }
+
+  .description span,
+  .description {
+    line-height: 25px;
+    font-weight: 400;
+    font-family: 'Arimo', sans-serif;
+    color: #444440;
+    font-size: 17px;
+  }
+
+  .description p {
+    font-style: italic;
+  }
+
+  .end {
+    border: none;
+  }
+
+  .dashboard__card {
+    padding: 0 10px 20px 0;
+  }
+
+  .dashboard__block .dashboard__card {
+    border: none;
+  }
+
+
+  .dashboard__block .dashboard__card:last-child {
+    border-bottom: 1px solid #444440;
+  }
+
+  .dashboard__achievements span, .dashboard__achievements {
+    display: inline-block;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    color: #8b8b8b;
+    font-weight: 800;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+  }
+
+  .dashboard__coloum-wieght .dashboard__block {
+    padding: 0 50px 0 50px;
+  }
+
+  .dashboard__coloum-wieght .dashboard__block .dashboard__card {
+    border: none;
+  }
+
+  .dashboard__place-age span {
+    display: inline-block;
+    margin: 5px 0;
+    font-family: 'Nunito Sans', sans-serif;
+    color: #444440;
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  ul li {
+    margin-left: 25px;
+    color: #525252;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+  .user__row{
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 10px;
+  }
+</style>
+
+<body>
+  <div class="wallaper">
+    <div class="header">
+      <div class="user__name">
+        <h1>{personal_details.first_name} {personal_details.last_name}</h1>
+      </div>
+      <div class="user__prof">
+        <h2 style='letter-spacing: 5px;'>{PositionName} | Стаж: {experience_summary.Years} лет</h2>
+      </div>
+      <div class="user__contact">
+        <div class="contact__li" style='order: 1;'>
+          <img src="./img/3/1.png" alt="" class="contact__icon">
+          <span>{personal_details.Website}</span>
+        </div>
+        <div class="contact__li" style='order: 4;'>
+          <img src="./img/3/2.png" alt="" class="contact__icon">
+          <span>{personal_details.Linkedin}</span>
+        </div>
+        <div class="contact__li" style='order: 3;'>
+          <img src="./img/3/5.png" alt="" class="contact__icon">
+          <span>{personal_details.Phone}</span>
+        </div>
+        <div class="contact__li" style='order: 2;'>
+          <img src="./img/3/3.png" alt="" class="contact__icon">
+          <span>{personal_details.Email}</span>
+        </div>
+        <div class="contact__li" style='order: 6;'>
+          <img src="./img/3/6.png" alt="" class="contact__icon">
+          <span>{Links.Url}</span>
+        </div>
+        <div class="contact__li" style='order: 5;'>
+          <img src="./img/3/4.png" alt="" class="contact__icon">
+          <span>{personal_details.City}, {personal_details.Address}</span>
+        </div>
+      </div>
+    </div>
+    <div class="user__info">
+      <div class="user__photo">
+        <img src="./img/3/7.png" alt="">
+      </div>
+      <div class="user__description">
+        <div class="user__age">
+          <span>{personal_details.Age} лет. {work_type}</span>
+        </div>
+        <span>{Introduction} {Objectives}</span>
+      </div>
+    </div>
+    <div class="user__dashboard">
+      <div class="dashboard__coloum-small">
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Образование</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__study">
+              <span>{Education.Institution}</span>
+            </div>
+            <div class="dashboard__age description">
+              <p>{Education.Degree}</p>
+              <p>{Education.start_date}-{Education.end_date}</p>
+            </div>
+            <div class="dashboard__description description">
+              <span>{Education.Description}</span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>курсы и сертификаты</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__study">
+              <span>{Education.Institution}</span>
+            </div>
+            <div class="dashboard__description description">
+              <p>{Education.Degree}</p>
+              <p>{Education.start_date}</p>
+              <span>{Education.Description}</span>
+            </div>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__study">
+              <span>{Certifications.Institution}</span>
+            </div>
+            <div class="dashboard__description description">
+              <p>{Education.Degree}</p>
+              <p>{Certifications.Date}</p>
+              <span>{Certifications.Description}</span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Языки</h2>
+          </div>
+          <div class="dashboard__card">
+            <p style='font-weight: 800; margin: 10px 0;' class="description">{Languages.Name}</p>
+            <p class="description" style='margin-top: 10px;'>Уровень: {Languages.Level}</p>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title" style='margin-bottom: 10px;'>
+            <h2>Увлечения</h2>
+          </div>
+          <div class="dashboard__cardend">
+            <p style='font-weight: 700;' class="description">{interests_activities}</p>
+          </div>
+        </div>
+      </div>
+      <div class="dashboard__coloum-wieght">
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Топ-достижения</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__achievements">
+              <span>{TopAchievements.Title}</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>{TopAchievements.Description}</span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Топ-навыки</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__achievements">
+              <span>{TopSkills.Title}</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>{TopSkills.Description}</span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2>Опыт работы</h2>
+          </div>
+          <div class="dashboard__card">
+            <div class="dashboard__achievements">
+              <span>{work_experience.Position}</span>
+            </div>
+            <div class="dashboard__place-age">
+              <span>{work_experience.City}, {work_experience.Company} | {work_experience.start_date}-{work_experience.end_date}</span>
+            </div>
+            <div class="dashboard__description description">
+              <span>{work_experience.FullDescription}</span>
+              <ul>
+                <p style='font-style: normal; font-weight: 800;'>Обязанности:</p>
+                <li>{work_experience.Responsibilities}</li>
+              </ul>
+              <ul>
+                <p style='font-style: normal; font-weight: 800;'>Достижения:</p>
+                <li>{work_experience.Achievements}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard__block">
+          <div class="dashboard__title">
+            <h2 style='letter-spacing: 10px;'>Рекомендации с прошлых мест работы</h2>
+          </div>
+          <div class='user__row'>
+            <div class="dashboard__card">
+              <p class='dashboard__achievements'>{References.Name}</p>
+              <p class='description'>
+                {References.Position},
+                {References.Company}
+              </p>
+              <p class='description'>Телефон: {References.contact_info}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
